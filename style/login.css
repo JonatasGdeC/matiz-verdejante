@@ -1,6 +1,29 @@
 .form{
-    max-width: 760px;
-    width: 100%;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 760px;
+    display: flex;
+    flex-direction: column;   
+}
+
+.form-buttons{
     display: flex;
     flex-direction: column;
+    gap: 10px;
+}
+
+.mensagem-erro{
+    width: 760px;
+    background-color: rgb(226, 158, 158);
+    border-radius: 6px;
+    margin-bottom: 20px;
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding: 16px;
+    display: none;
 }

@@ -10,12 +10,16 @@
 <body>
     <div class="line-header"></div>
     <form class="form">
-        <label class="label">Usuário</label>
-        <input type="email" placeholder="Informe seu email">
-        <label class="label">Senha</label>
-        <input type="password" placeholder="Informe sua senha">
-        <button type="button">Entrar</button>
-        <button type="button">Cadastro</button>
+        <div class="mensagem-erro" id="error"></div>
+        <label class="label" for="user">Usuário</label>
+        <input class="input" id="user" type="email" placeholder="Informe seu email">
+        <label class="label" for="password">Senha</label>
+        <input class="input" id="password" type="password" placeholder="Informe sua senha">
+        <div class="form-buttons">
+            <button class="button button-principal" id="entrar" type="button">Entrar</button>
+            <button class="button button-secundario" id="cadastrar" type="button">Cadastro</button>
+        </div>
     </form>
 </body>
+<script src="./js/login.js"></script>
 </html>
