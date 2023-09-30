@@ -17,3 +17,7 @@ botaoEntrar.addEventListener("click", () =>{
         mensagemErro.style.display='none';
     }
 })
+
+botaoCadastrar.addEventListener("click", () =>{
+    window.location=('./cadastro.html')
+})

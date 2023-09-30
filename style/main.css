@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
     background-color: var(--background-principal);
 }
 
@@ -13,10 +14,16 @@
     --verde-botao: rgb(1, 77, 1);
 }
 
-.line-header{
+.header{
     height: 50px;
     width: 100%;
     background-color: var(--verde-principal);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;   
+    padding: 90px 180px;
 }
 
 .label{
@@ -68,4 +75,16 @@
 .button-secundario:hover{
     color: #fff;
     background-color: var(--verde-botao);
+}
+
+@media (max-width: 1024px) {
+    .form{
+        padding: 45px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .form{
+        padding: 20px;
+    }
 }
