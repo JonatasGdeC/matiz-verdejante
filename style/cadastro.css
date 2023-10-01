@@ -1,3 +1,11 @@
 .list-requisitos{
-    padding-bottom: 12px;
+    padding: 12px 0;
+}
+
+#criar{
+    margin-top: 25px;
+}
+
+span{
+    color: red;
 }

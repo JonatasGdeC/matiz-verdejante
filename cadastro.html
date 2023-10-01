@@ -12,20 +12,20 @@
 <body>
     <div class="header">
         <a href="./login.html">
-            <span class="material-symbols-outlined">arrow_back_ios</span>
+            <button class="material-symbols-outlined">arrow_back_ios</button>
         </a>
     </div>
     <form class="form">
         <label class="label" for="name">Primeiro nome</label>
-        <input class="input" id="name" type="text" placeholder="Insira seu primeiro nome">
+        <input class="input" id="name" name="nome" type="text" placeholder="Insira seu primeiro nome">
         <label class="label" for="last-name">Sobrenome</label>
-        <input class="input" id="last-name" type="text" placeholder="Insira seu sobrenome">
+        <input class="input" id="last-name" name="sobrenome" type="text" placeholder="Insira seu sobrenome">
         <label class="label" for="email">E-mail</label>
-        <input class="input" id="email" type="email" placeholder="Insira seu e-mail">
+        <input class="input" id="email" name="email" type="email" placeholder="Insira seu e-mail">
         <label class="label" for="data">Data de Nascimento</label>
-        <input class="input" id="data" type="date">
+        <input class="input" id="data" name="data" placeholder="00/00/0000">
         <label class="label" for="cpf">CPF</label>
-        <input class="input" id="cpf" type="number" placeholder="000.000.000-00">
+        <input class="input" id="cpf" name="cpf" placeholder="000.000.000-00">
         <label class="label" for="genero">Gênero</label>
         <select id="genero" class="input">
             <option value=""></option>
@@ -33,9 +33,9 @@
             <option value="masc">Masculino</option>
         </select>
         <label class="label" for="celular">Celular</label>
-        <input class="input" id="celular" type="tel" placeholder="(00) 00000-0000">
+        <input class="input" id="celular" name="celular" placeholder="(00) 00000-0000">
         <label class="label" for="senha">Senha</label>
-        <input class="input" type="password" placeholder="Crie sua senha" minlength="8" maxlength="25">
+        <input class="input" id="senha" name="senha" type="password" placeholder="Crie sua senha" minlength="8" maxlength="25">
         <ul class="list-requisitos">
             <li>Mínimo 8 caracteres, máximo 25</li>
             <li>Mínimo uma letra maiúscula</li>
@@ -44,8 +44,12 @@
             <li>Mínimo um caractere especial (ex: ! @ _ +)</li>
         </ul>
         <label class="label" for="repetirSenha">Repetir senha</label>
-        <input class="input" type="password" placeholder="Digite novamente sua senha" minlength="8" maxlength="25">
-        <button class="button button-principal">Criar conta</button>
+        <input class="input" id="repetirSenha" name="repetirSenha" type="password" placeholder="Digite novamente sua senha" minlength="8" maxlength="25">
+        <button class="button button-principal" id="criar" type="submit">Criar conta</button>
     </form>
 </body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="./js/plugins-jquery/jquery.mask.min.js"></script>
+<script src="./js/plugins-jquery/jquery.validate.min.js"></script>
+<script src="./js/cadastro.js"></script>
 </html>
