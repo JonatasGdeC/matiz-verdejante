@@ -41,3 +41,17 @@ $(".form").validate({
     }
 })
 
+const requisitos = document.getElementById('list')
+const senha = document.getElementById('senha')
+
+
+senha.addEventListener('keyup', ()=>{
+    const contemNumero = /[0-9]/.test(senha);
+    if(!contemNumero){
+        requisitos.children[3].style.color='green'
+    } else {
+        requisitos.children[3].style.color='red'
+    }
+})
+
+
