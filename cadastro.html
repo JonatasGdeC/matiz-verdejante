@@ -12,10 +12,10 @@
 <body>
     <div class="header">
         <a href="./login.html">
-            <button class="material-symbols-outlined">arrow_back_ios</button>
+            <a class="material-symbols-outlined button-back" href="./login.html">arrow_back_ios</a>
         </a>
     </div>
-    <form class="form">
+    <form class="form" id="form">
         <label class="label" for="name">Primeiro nome</label>
         <input class="input" id="name" name="nome" type="text" placeholder="Insira seu primeiro nome">
         <label class="label" for="last-name">Sobrenome</label>
@@ -27,7 +27,7 @@
         <label class="label" for="cpf">CPF</label>
         <input class="input" id="cpf" name="cpf" placeholder="000.000.000-00">
         <label class="label" for="genero">Gênero</label>
-        <select id="genero" class="input">
+        <select id="genero" name="genero" class="input">
             <option value=""></option>
             <option value="fem">Feminino</option>
             <option value="masc">Masculino</option>

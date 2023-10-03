@@ -1,3 +1,5 @@
+@import url('./main.css');
+
 .form-buttons{
     display: flex;
     flex-direction: column;
@@ -5,10 +7,10 @@
 }
 
 .mensagem-erro{
-    background-color: rgb(226, 158, 158);
+    background-color: var(--erro-background);
     border-radius: 6px;
     margin-bottom: 20px;
-    color: red;
+    color: var(--erro-texto);
     font-size: 25px;
     font-weight: bold;
     text-align: center;
