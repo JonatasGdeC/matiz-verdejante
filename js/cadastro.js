@@ -33,8 +33,7 @@ $(".form").validate({
             required:true
         },
         repetirSenha:{
-            required:true,
-            equalTo:senha
+            required:true
         },
         genero:{
             required:true
@@ -53,7 +52,46 @@ $(".form").validate({
     }
 })
 
+const createSpan = document.createElement('span') //Criação de span com mensagem de erro
+const regex = /[0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/; //Regra de existência de números ou caracteres especiais
+
 const form = document.getElementById('form')
-const cadastro = document.getElementById('criar')
 const nome = document.getElementById('name')
+const sobrenome = document.getElementById('last-name')
+const senha1 = document.getElementById('senha')
+const senha2 = document.getElementById('repetirSenha')
+
+//Validação de números e caracteres especiais no input nome
+nome.addEventListener('keyup', ()=>{
+    if(regex.test(nome.value)){
+        createSpan.textContent='Não escreva números ou caracteres especiais!'
+        nome.insertAdjacentElement('afterend', createSpan)
+    } else {
+        createSpan.remove()
+    }
+})
+
+//Validação de números e caracteres especiais no input sobrenome
+sobrenome.addEventListener('keyup', ()=>{
+    if(regex.test(sobrenome.value)){
+        createSpan.textContent='Não escreva números ou caracteres especiais!'
+        sobrenome.insertAdjacentElement('afterend', createSpan)
+    } else {
+        createSpan.remove()
+    }
+})
+
+senha2.addEventListener('focusout', ()=>{
+    if(senha2.value !== senha1.value){
+        createSpan.textContent='As senhas devem ser iguais'
+        senha1.insertAdjacentElement('afterend', createSpan)
+        senha2.insertAdjacentElement('afterend', createSpan)
+    } else{
+        createSpan.remove()
+    }
+})
+
+
+
+
 
