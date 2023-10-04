@@ -60,6 +60,7 @@ const nome = document.getElementById('name')
 const sobrenome = document.getElementById('last-name')
 const senha1 = document.getElementById('senha')
 const senha2 = document.getElementById('repetirSenha')
+const requisitos = document.getElementById('list')
 
 //Validação de números e caracteres especiais no input nome
 nome.addEventListener('keyup', ()=>{
@@ -89,6 +90,39 @@ senha2.addEventListener('focusout', ()=>{
     } else{
         createSpan.remove()
     }
+})
+
+
+senha1.addEventListener('keyup', ()=>{
+    //Verificação se campo de senha tem letra maiúscula
+    const contemLetraMaiscula = /[A-Z]/.test(senha1.value)
+    if(contemLetraMaiscula){
+        requisitos.children[1].style.color='green'
+    } else {
+        requisitos.children[1].style.color='black'
+    }
+    //Verificação se campo de senha tem letra minúscula
+    const contemLetraMinuscula = /[a-z]/.test(senha1.value)
+    if(contemLetraMinuscula){
+        requisitos.children[2].style.color='green'
+    } else {
+        requisitos.children[2].style.color='black'
+    }
+    //Verificação se campo de senha tem número
+    const contemNumero = /[0-9]/.test(senha1.value);
+    if(contemNumero){
+        requisitos.children[3].style.color='green'
+    } else {
+        requisitos.children[3].style.color='black'
+    }
+    //Verificação se campo de senha tem caractere especial
+    const contemCaractereEsp = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(senha1.value)
+    if(contemCaractereEsp){
+        requisitos.children[4].style.color='green'
+    } else{
+        requisitos.children[4].style.color='black'
+    }
+
 })
 
 
