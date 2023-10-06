@@ -1,0 +1,137 @@
+/* styles.css */
+body {
+    background-color: #F0EAD6; /* Cor de areia */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50; /* Verde predominante */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.carousel-container {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/*carrosel*/
+/*carrosel*/
+
+.carousel {
+    margin-top: 20px;
+  }
+  
+  /* Estilos para os indicadores do carrossel */
+  .carousel-indicators li {
+    background-color: #007bffce; /* Cor de fundo dos indicadores ativos */
+  }
+  
+  /* Estilos para os controles do carrossel (setas) */
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: rgba(117, 182, 146, 0.5); /* Cor de fundo dos controles */
+    border: none; /* Remova a borda dos controles */
+  }
+  
+  /* Estilos para os ícones das setas do carrossel */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    color: #1aac21; /* Cor dos ícones das setas */
+    font-size: 30px; /* Tamanho dos ícones das setas */
+  }
+  
+  /* Estilos para o texto do carrossel */
+  .carousel-caption {
+    background-color: rgba(31, 175, 127, 0.338); /* Cor de fundo do texto */
+    color: #1caa36b1; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno do texto */
+  }
+  
+  /* Estilos para as imagens do carrossel */
+  .carousel-item img {
+    max-width: 30%; /* A imagem terá no máximo 100% de largura do elemento pai */
+    height: auto; /* A altura da imagem será ajustada automaticamente para manter a proporção */
+  }
+  
+  .w-100 {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+
+/*carrosel*/
+/*carrosel*/
+
+
+/*produtos iniciais*/
+/*produtos iniciais*/
+.imgIni {
+    border-radius: 100%;
+    height: 300px;
+    width: 300px;
+}
+/* styles.css */
+/* Restante do seu código CSS */
+
+/* Produtos */
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+/* Estilos para os produtos individuais */
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    position: relative; /* Adicione esta linha para que a descrição seja posicionada em relação ao elemento pai */
+}
+
+/* Adicione este estilo para ocultar a descrição por padrão */
+.product .description {
+    display: none;
+    position: absolute;
+    top: 100%; /* Alinhar a descrição logo abaixo do produto */
+    left: 0;
+    right: 0;
+    background-color:#f4edd8e1; /* Fundo semi-transparente para a descrição */
+    padding: 10px;
+    z-index: 1; /* Certifique-se de que a descrição esteja acima do produto */
+}
+
+/* Adicione este estilo para mostrar a descrição quando o mouse passar por cima do produto */
+.product:hover .description {
+    display: block;
+}
+
+
+/*produtos iniciais*/
+/*produtos iniciais*/
+
+
