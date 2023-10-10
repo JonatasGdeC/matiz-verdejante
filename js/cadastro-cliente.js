@@ -193,6 +193,7 @@ var senha2Correta = senha2.addEventListener('focusout', ()=>{
     }
 })
 
+//Validação ao enviar o formulário
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
     if (!nomeCorreto || !sobrenomeCorreto || !emailCorreto || !dataCorreta || !cpfCorreto || !generoSelecionado || !celularCorreto || !senha1Correta || !senha2Correta){

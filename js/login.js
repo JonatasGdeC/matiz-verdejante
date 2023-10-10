@@ -4,6 +4,8 @@ const senha = document.getElementById('password')
 const mensagemErro = document.getElementById('error')
 const botaoEntrar = document.getElementById('entrar')
 const botaoCadastrar = document.getElementById('cadastrar')
+const botaoCliente = document.getElementById('cliente')
+const botaoVendedor = document.getElementById('vendedor')
 
 function erroMensagem(){
     usuario.classList.add('input-error')
@@ -27,6 +29,27 @@ botaoEntrar.addEventListener("click", () =>{
     }
 })
 
-botaoCadastrar.addEventListener("click", () =>{
-    window.location=('./cadastro.html')
+botaoVendedor.addEventListener('click', ()=>{
+    botaoVendedor.classList.remove('button-secundario')
+    botaoVendedor.classList.add('button-principal')
+
+    botaoCliente.classList.remove('button-principal')
+    botaoCliente.classList.add('button-secundario')
 })
+
+botaoCliente.addEventListener('click', ()=>{
+    botaoVendedor.classList.add('button-secundario')
+    botaoVendedor.classList.remove('button-principal')
+
+    botaoCliente.classList.add('button-principal')
+    botaoCliente.classList.remove('button-secundario')
+})
+
+botaoCadastrar.addEventListener("click", () =>{
+    if(botaoCliente.classList.contains('button-principal')){
+        window.location=('./cadastro-cliente.html')
+    } else {
+        window.location=('./cadastro-vendedor.html')
+    }
+})
+

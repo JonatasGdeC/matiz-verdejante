@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/_cadastro.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div id="bodyCadastro">
+        <div class="header header-secundary">
+            <a href="./login.html">
+                <a class="material-symbols-outlined button-back" href="./login.html">arrow_back_ios</a>
+            </a>
+        </div>
+        <form class="form" id="form">
+            <label class="label" for="name">Primeiro nome</label>
+            <input class="input" id="name" type="text" placeholder="Insira seu primeiro nome">
+            <label class="label" for="last-name">Sobrenome</label>
+            <input class="input" id="last-name" type="text" placeholder="Insira seu sobrenome">
+            <label class="label" for="cpf">CPF</label>
+            <input class="input" id="cpf" placeholder="000.000.000-00">
+            <label class="label" for="email">E-mail</label>
+            <input class="input" id="email" type="email" placeholder="Insira seu e-mail">
+            <label class="label" for="celular">Celular</label>
+            <input class="input" id="celular" placeholder="(00) 00000-0000">
+            <label class="label" for="cep">CEP</label>
+            <input class="input" id="cep" placeholder="00000-000" type="number">
+            <label class="label" for="descricao">Faça um breve resumo de como seus produtos são biogradáveis:</label>
+            <textarea class="input" id="descricao" rows="10"></textarea>
+            <label class="label" for="senha">Senha</label>
+            <input class="input" id="senha" type="password" placeholder="Crie sua senha" minlength="8" maxlength="25">
+            <ul class="list-requisitos" id="list">
+                <li>Mínimo 8 caracteres, máximo 25</li>
+                <li>Mínimo uma letra maiúscula</li>
+                <li>Mínimo uma letra minúscula</li>
+                <li>Mínimo um número</li>
+                <li>Mínimo um caractere especial (ex: ! @ _ +)</li>
+            </ul>
+            <label class="label" for="repetirSenha">Repetir senha</label>
+            <input class="input" id="repetirSenha" type="password" placeholder="Digite novamente sua senha" minlength="8" maxlength="25">
+            <button class="button button-principal" id="criar" type="submit">Criar conta</button>
+        </form>
+    </div>
+</body>
+</html>
