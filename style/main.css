@@ -1,19 +1,11 @@
+@import url('./_variaveis.css');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
-}
-
-:root {
-    --background-principal: rgb(245, 245, 224);
-    --texto-principal: #1f1f1f;
-    --texto-secundario: #fff;
-    --verde-principal: rgba(56, 128, 15);
-    --verde-botao: rgb(1, 77, 1);
-    --erro-texto: red;
-    --erro-background: rgb(226, 158, 158);
 }
 
 body{
@@ -55,7 +47,7 @@ body{
 
 .header-link{
     text-decoration: none;
-    color: #fff;
+    color: var(--background-principal);
     font-weight: bold;
     transition: all ease 0.3s;
 }
