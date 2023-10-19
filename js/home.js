@@ -11,7 +11,16 @@ AOS.init();
 
 const btnHamburguer = document.getElementById('menu-hamburguer')
 const links = document.getElementById('header-links')
+const btnCloseMenu = document.getElementById('btn-close')
 
 btnHamburguer.addEventListener('click', ()=>{
-    links.classList.toggle('links-visiveis')
+    btnHamburguer.style.display='none'
+    btnCloseMenu.style.display='block'
+    links.style.display='block'
+})
+
+btnCloseMenu.addEventListener('click', ()=>{
+    btnHamburguer.style.display='block'
+    links.style.display='none'
+    btnCloseMenu.style.display='none'
 })

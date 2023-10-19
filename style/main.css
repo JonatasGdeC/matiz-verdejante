@@ -28,8 +28,13 @@ body{
     width: 100%;
     display: flex;
     align-items:center;
-    justify-content: space-between;
     margin-left: 25px;
+}
+
+.header-options{
+    display: flex;
+    align-items: center;
+    gap: 100px;
 }
 
 .header-list{
@@ -55,6 +60,18 @@ body{
 
 .header-link:hover{
     opacity: 0.7;
+}
+
+.header-menu{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+#btn-close{
+    color: white;
+    font-size: 25px;
+    display: none;
 }
 
 #menu-hamburguer{
@@ -153,12 +170,18 @@ body{
         justify-content: space-between;
     }
     .header-links{
-        flex-direction: column-reverse;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 26px;
+        background-color: rgba(0, 128, 0, 1);
+        width: auto;
         display: none;
     }
 
-    .links-visiveis{
-        display: block;
+    .header-options{
+        flex-direction: column-reverse;
+        gap: 32px;
     }
 
     .header-list{
