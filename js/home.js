@@ -8,3 +8,10 @@ $('.carrossel').slick({
 });
 
 AOS.init();
+
+const btnHamburguer = document.getElementById('menu-hamburguer')
+const links = document.getElementById('header-links')
+
+btnHamburguer.addEventListener('click', ()=>{
+    links.classList.toggle('links-visiveis')
+})

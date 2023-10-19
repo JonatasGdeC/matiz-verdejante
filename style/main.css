@@ -29,6 +29,7 @@ body{
     display: flex;
     align-items:center;
     justify-content: space-between;
+    margin-left: 25px;
 }
 
 .header-list{
@@ -148,9 +149,16 @@ body{
 }
 
 @media (max-width: 760px) {
+    .header{
+        justify-content: space-between;
+    }
     .header-links{
         flex-direction: column-reverse;
         display: none;
+    }
+
+    .links-visiveis{
+        display: block;
     }
 
     .header-list{
