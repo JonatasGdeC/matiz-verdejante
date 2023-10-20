@@ -28,13 +28,14 @@ body{
     width: 100%;
     display: flex;
     align-items:center;
-    margin-left: 25px;
+    padding: 0 20px 0 32px;
 }
 
 .header-options{
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 100px;
+    justify-content: space-between;
 }
 
 .header-list{
@@ -78,10 +79,6 @@ body{
     color: white;
     font-size: 25px;
     display: none;
-}
-
-.header-secundary{
-    justify-content: left;
 }
 
 .form {
@@ -186,6 +183,10 @@ body{
 
     .header-list{
         flex-direction: column;
+    }
+
+    .header-secundary{
+        justify-content: left;
     }
 
     #menu-hamburguer{

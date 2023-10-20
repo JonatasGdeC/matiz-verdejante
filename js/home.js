@@ -24,3 +24,23 @@ btnCloseMenu.addEventListener('click', ()=>{
     links.style.display='none'
     btnCloseMenu.style.display='none'
 })
+
+if(window.innerWidth < 760){
+    $('.destaque-lista').slick({
+        dots: true,
+        arrows: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        
+        responsive: [
+            {
+            breakpoint: 570,
+            settings: {                
+                slidesToShow: 1,
+            }
+            },
+        ]
+    });
+}
