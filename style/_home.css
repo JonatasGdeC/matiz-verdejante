@@ -115,6 +115,7 @@
 }
 
 @media (max-width: 760px){
+
     .carrosselECategorias{
       display: flex;
       flex-direction: column-reverse;
@@ -141,9 +142,16 @@
       display: none;
     }
 
+    .destaque-item{
+      max-width: 80vh;
+    }
+    
+    .destaque-img{
+      max-width: 100vh;
+    }
+
     .destaque-title{
       text-align: left;
       font-size: 16px;
     }
-
 }

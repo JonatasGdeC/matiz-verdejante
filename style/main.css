@@ -196,4 +196,9 @@ body{
     .form {
         padding: 20px;
     }
+
+    .button{
+        font-size: 16px;
+        padding: 6px;
+    }
 }
