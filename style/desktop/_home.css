@@ -1,4 +1,4 @@
-@import url('./_variaveis.css');
+@import url('../_variaveis.css');
 
 .logo-header{
   width: 90px; 
@@ -8,18 +8,11 @@
   height: 60px;
 }
 
-.container{
-  max-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 32px 0;
-}
-
 .title{
   color: var(--verde-principal);
   text-align: center;
   font-size: 32px;
-  padding-bottom: 20px;
+  padding: 32px 0 20px
 }
 
 .text{
@@ -112,46 +105,4 @@
   font-size: 20px;
   font-weight: bold;
   color: var(--verde-botao);
-}
-
-@media (max-width: 760px){
-
-    .carrosselECategorias{
-      display: flex;
-      flex-direction: column-reverse;
-    }
-
-    .container:first-of-type{
-      padding: 0;
-    }
-
-    .title-categorias{
-        display: none;
-    }
-
-    .categoria-item{
-      border-radius: 0;
-      height: 70px;
-    }
-
-    .categoria-img{
-      width: 50px;
-    }
-
-    .categoria-link{
-      display: none;
-    }
-
-    .destaque-item{
-      max-width: 80vh;
-    }
-    
-    .destaque-img{
-      max-width: 100vh;
-    }
-
-    .destaque-title{
-      text-align: left;
-      font-size: 16px;
-    }
 }
