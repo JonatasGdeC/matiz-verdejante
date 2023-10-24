@@ -30,18 +30,20 @@ var cepCorreto = cep.addEventListener('focusout', ()=>{
     }
 })
 
-descricao.addEventListener('focusout', ()=>{
-    if( descricao.value=='' || descricao.value.length < 50){
+var descricaoCorreto = descricao.addEventListener('focusout', ()=>{
+    if(descricao.value=='' || descricao.value.length < 50){
         createSpan.textContent='Escreva no mínimo 50 caracteres!'
         descricao.insertAdjacentElement('afterend', createSpan)
+        return descricaoCorreto = false
     } else {
         createSpan.remove()
+        return descricaoCorreto = true
     }
 })
 
 formVendedor.addEventListener('submit', (e)=>{
     e.preventDefault()
-    if(!nomeCorreto || !sobrenomeCorreto || !cpfCorreto || !emailCorreto || !celularCorreto || !cepCorreto || !senha1Correta || !senha2Correta){
+    if(!nomeCorreto || !sobrenomeCorreto || !cpfCorreto || !emailCorreto || !celularCorreto || !cepCorreto || !descricaoCorreto || !senha1Correta || !senha2Correta){
         alert('Preencha todos os campos corretamente!')
     } else{
         mensageSucess.style.display='block'
