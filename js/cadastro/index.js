@@ -19,17 +19,6 @@ const telefone = document.getElementById('celular')
 const senha1 = document.getElementById('senha')
 const senha2 = document.getElementById('repetirSenha')
 
-//Campos de input do formulário de cadastro de cliente
-const dataNasc = document.getElementById('data')
-const genero = document.getElementById('genero')
-
-//Campos de input do formulário de cadastro de vendedor
-const cep = document.getElementById('cep')
-const endereco = document.getElementById('endereco')
-const cidade = document.getElementById('cidade')
-const estado = document.getElementById('estado')
-const descricao = document.getElementById('descricao')
-
 //Lista de requisitos de senha
 const requisitos = document.getElementById('list')
 

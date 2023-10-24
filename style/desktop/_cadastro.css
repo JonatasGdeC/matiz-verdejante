@@ -1,4 +1,4 @@
-@import url('./_variaveis.css');
+@import url('../_variaveis.css');
 
 .list-requisitos{
     padding: 12px 0;
@@ -52,14 +52,3 @@ span{
     text-align: center;
 }
 
-@media (max-width: 1024px){
-    .mensage-sucess{
-        margin: 20px 90px;
-    }
-}
-
-@media (max-width: 760px) {
-    .mensage-sucess{
-        margin: 10px;
-    }
-}

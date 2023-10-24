@@ -1,3 +1,7 @@
+//Campos de input do formulário de cadastro somente de cliente
+const dataNasc = document.getElementById('data')
+const genero = document.getElementById('genero')
+
 //Verificação do campo de data de nascimento
 var dataCorreta = dataNasc.addEventListener('focusout', ()=>{
     if(dataNasc.value == '' || dataNasc.value.length < 10){
