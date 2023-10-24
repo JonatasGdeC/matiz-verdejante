@@ -30,7 +30,7 @@ var cepCorreto = cep.addEventListener('focusout', ()=>{
     }
 })
 
-descricao.addEventListener('focusin', ()=>{
+descricao.addEventListener('focusout', ()=>{
     if( descricao.value=='' || descricao.value.length < 50){
         createSpan.textContent='Escreva no mínimo 50 caracteres!'
         descricao.insertAdjacentElement('afterend', createSpan)
@@ -40,9 +40,9 @@ descricao.addEventListener('focusin', ()=>{
 })
 
 formVendedor.addEventListener('submit', (e)=>{
+    e.preventDefault()
     if(!nomeCorreto || !sobrenomeCorreto || !cpfCorreto || !emailCorreto || !celularCorreto || !cepCorreto || !senha1Correta || !senha2Correta){
-        alert("Preencha todos os campos corretamente!")
-        e.preventDefault()
+        alert('Preencha todos os campos corretamente!')
     } else{
         mensageSucess.style.display='block'
         btnClose.addEventListener('click', ()=>{
