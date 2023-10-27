@@ -17,6 +17,8 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="./style/rating_style.css">
 </head>
 
 <body>
@@ -118,6 +120,14 @@
                 <div class="destaque-descricao">
                     <h4 class="destaque-title">Oléo essencial</h4>
                     <p class="destaque-text">A essência pura da natureza em cada gota. Sinta a verdadeira essência para o seu dia a dia.</p>
+                     <div class="rating">
+                        <span class="star" data-rating="1">&#9733;</span>
+                        <span class="star" data-rating="2">&#9733;</span>
+                        <span class="star" data-rating="3">&#9733;</span>
+                        <span class="star" data-rating="4">&#9733;</span>
+                        <span class="star" data-rating="5">&#9733;</span>
+                     </div>
+    <p>Your Rating: <span id="rating">0</span> stars</p>
                     <div class="destaque-comprar">
                         <p>R$24.99</p>
                         <button class="button button-principal">Comprar</button>
@@ -154,5 +164,6 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/home.js"></script>
+    <script src="./js/rating.js"></script>
 </body>
 </html>
