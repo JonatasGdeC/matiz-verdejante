@@ -9,7 +9,17 @@
     justify-content: center;
 }
 
-p {
-    font-size: 20px;
-    margin-top: 10px;
+.rating1 {
+    display: flex;
+    justify-content: center;
+}
+
+.rating2 {
+    display: flex;
+    justify-content: center;
+}
+
+.rating3 {
+    display: flex;
+    justify-content: center;
 }
