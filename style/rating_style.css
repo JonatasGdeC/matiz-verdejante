@@ -3,6 +3,21 @@
     cursor: pointer;
     padding: 5px;
 }
+.star1 {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+}
+.star2 {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+}
+.star3 {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+}
 
 .rating {
     display: flex;
