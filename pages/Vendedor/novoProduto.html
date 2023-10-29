@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Produto</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../../style/main.css">
+</head>
+<body>
+    <div class="header header-secundary">
+        <a href="./home.html">
+            <span class="material-symbols-outlined button-back">arrow_back_ios</span>
+        </a>
+        <h2 class="title-aba">Cadastro de novo produto</h2>
+    </div>
+    <form class="form">
+        <label class="label" for="nome">Nome do Produto:</label>
+        <input class="input" id="nome" type="text">
+        <label class="label" for="descricao">Descrição:</label>
+        <textarea class="input" id="descricao" cols="30" rows="10"></textarea>
+        <label class="label" for="categoria">Categoria:</label>
+        <select class="input" id="categoria">
+            <option value="">Rosto</option>
+            <option value="">Corpo</option>
+            <option value="">Cabelo Feminino</option>
+            <option value="">Cabelo Masculino</option>
+            <option value="">Barba</option>
+        </select>
+        <label class="label" for="image">Imagens de Divulgação:</label>
+        <input class="input" id="image" type="file" accept="image/*">
+        <label class="label" for="preco">Preço:</label>
+        <input class="input" type="text" id="preco">
+        <button type="submit" class="button button-principal">Cadastrar</button>
+    </form>
+</body>
+</html>

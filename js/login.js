@@ -43,18 +43,18 @@ botaoEntrar.addEventListener("click", () =>{
         senha.classList.remove('input-error')
         mensagemErro.style.display='none';
         if(vendedor == true){
-            window.location=('./home/vendedor.html')
+            window.location=('./Vendedor/home.html')
         } else {
-            window.location=('./home/cliente.html')
+            window.location=('./Cliente/home.html')
         }
     }
 })
 
 botaoCadastrar.addEventListener("click", () =>{
     if(botaoCliente.classList.contains('button-principal')){
-        window.location=('./cadastro/cliente.html')
+        window.location=('./Cliente/cadastro.html')
     } else {
-        window.location=('./cadastro/vendedor.html')
+        window.location=('./Vendedor/cadastro.html')
     }
 })
 

@@ -91,6 +91,27 @@ body{
     display: none;
 }
 
+.title{
+    color: var(--verde-principal);
+    text-align: center;
+    font-size: 32px;
+    padding: 32px 0 20px
+}
+
+.title-aba{
+    color: var(--texto-secundario);
+    padding-left: 20px;
+}
+
+.text{
+    margin: 12px 0;
+    padding: 12px;
+    font-size: 20px;
+    border: 1px solid var(--verde-principal);
+    border-radius: 6px;
+}
+
+
 .form {
     display: flex;
     flex-direction: column;
