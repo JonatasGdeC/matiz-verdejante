@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="shortcut icon" href="../images/logo.png">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <link rel="stylesheet" href="../style/desktop/_produtos.css">
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><img src="../images/logo.png" class="logo-header" alt="Logo Matiz Verdejante"></a>
+        <div class="header-links" id="header-links">
+            <ul class="header-options">
+                <div class="header-list">
+                    <li><a class="header-link" href="#">Novidades</a></li>
+                    <li><a class="header-link" href="#">Promoções</a></li>
+                    <li><a class="header-link" href="#">Contato</a></li>
+                </div>
+                <div class="header-menu">
+                    <a href="./login.html" title="Login">
+                        <img class="header-icon" src="../images/icon-login.png" alt="Login">
+                    </a>
+                    <span class="material-symbols-outlined" id="btn-close">close</span>
+                </div>
+            </ul>
+        </div>
+        <span class="material-symbols-outlined" id="menu-hamburguer">menu</span>
+    </header>
+    <main class="produtos">
+        <section class="filtro">
+            <form>
+                <label for="marcas">Marcas:</label>
+                <select id="marcas">
+                    <option value="">Marca 1</option>
+                    <option value="">Marca 2</option>
+                    <option value="">Marca 3</option>
+                    <option value="">Marca 4</option>
+                    <option value="">Marca 5</option>
+                    <option value="">Marca 6</option>
+                    <option value="">Marca 7</option>
+                    <option value="">Marca 8</option>
+                    <option value="">Marca 9</option>
+                    <option value="">Marca 10</option>
+                </select>
+                <label for="valor">Preço:</label>
+                <input type="range" min="5" max="100" step="5">
+                <label for="categorias">Categorias:</label>
+                <div>
+                    <div>
+                        <input id="todas" type="checkbox">
+                        <label for="todas">Todas</label>
+                    </div>
+                    <div>
+                        <input id="rosto" type="checkbox">
+                        <label for="rosto">Rosto</label>
+                    </div>
+                    <div>
+                        <input id="corpo" type="checkbox">
+                        <label for="corpo">Corpo</label>
+                    </div>
+                    <div>
+                        <input id="cabelo-fem" type="checkbox">
+                        <label for="cabelo-fem">Cabelo feminino</label>
+                    </div>
+                    <div>
+                        <input id="cabelo-mas" type="checkbox">
+                        <label for="cabelo-mas">Cabelo masculino</label>
+                    </div>
+                    <div>
+                        <input id="barba" type="checkbox">
+                        <label for="barba">Barba</label>
+                    </div>
+                </div>
+                <button class="button button-secundario" >Aplicar</button>
+            </form>
+        </section>
+        <section>
+            <div class="produtos-categoria">
+                <h2 class="title">Rosto</h2>
+                <div class="list-produtos">
+                    <div class="produtos">
+                        <img src="https://via.placeholder.com/300x200.png" alt="">
+                        <h4>lorem</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis facere autem rerum velit fuga voluptate ab laborum iure assumenda dicta quod, ex minus consectetur ipsa, quaerat, culpa laboriosam atque.</p>
+                        <div>
+                            <p>R$ --,--</p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos">
+                        <img src="https://via.placeholder.com/300x200.png" alt="">
+                        <h4>lorem</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis facere autem rerum velit fuga voluptate ab laborum iure assumenda dicta quod, ex minus consectetur ipsa, quaerat, culpa laboriosam atque.</p>
+                        <div>
+                            <p>R$ --,--</p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos">
+                        <img src="https://via.placeholder.com/300x200.png" alt="">
+                        <h4>lorem</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis facere autem rerum velit fuga voluptate ab laborum iure assumenda dicta quod, ex minus consectetur ipsa, quaerat, culpa laboriosam atque.</p>
+                        <div>
+                            <p>R$ --,--</p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos">
+                        <img src="https://via.placeholder.com/300x200.png" alt="">
+                        <h4>lorem</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis facere autem rerum velit fuga voluptate ab laborum iure assumenda dicta quod, ex minus consectetur ipsa, quaerat, culpa laboriosam atque.</p>
+                        <div>
+                            <p>R$ --,--</p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos">
+                        <img src="https://via.placeholder.com/300x200.png" alt="">
+                        <h4>lorem</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis facere autem rerum velit fuga voluptate ab laborum iure assumenda dicta quod, ex minus consectetur ipsa, quaerat, culpa laboriosam atque.</p>
+                        <div>
+                            <p>R$ --,--</p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos">
+                        <img src="https://via.placeholder.com/300x200.png" alt="">
+                        <h4>lorem</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis facere autem rerum velit fuga voluptate ab laborum iure assumenda dicta quod, ex minus consectetur ipsa, quaerat, culpa laboriosam atque.</p>
+                        <div>
+                            <p>R$ --,--</p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos">
+                        <img src="https://via.placeholder.com/300x200.png" alt="">
+                        <h4>lorem</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis facere autem rerum velit fuga voluptate ab laborum iure assumenda dicta quod, ex minus consectetur ipsa, quaerat, culpa laboriosam atque.</p>
+                        <div>
+                            <p>R$ --,--</p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../js/produtos.js"></script>
+</body>
+</html>

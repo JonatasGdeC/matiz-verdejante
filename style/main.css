@@ -30,6 +30,10 @@ body{
     align-items: center;
 }
 
+.logo-header{
+    width: 90px; 
+}
+
 .header-links{
     width: 100%;
     display: flex;

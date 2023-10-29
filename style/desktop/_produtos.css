@@ -1,0 +1,25 @@
+.produtos{
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.filtro{
+    background-color: red;
+}
+
+.produtos-categoria{
+    max-width: 90vw;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list-produtos{
+    background-color: blue;
+}
+
+.produtos{
+    max-width: 380px;
+    width: 100%;
+}
