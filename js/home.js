@@ -44,3 +44,4 @@ if(window.innerWidth < 760){
         ]
     });
 }
+

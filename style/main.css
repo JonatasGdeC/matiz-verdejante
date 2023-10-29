@@ -54,10 +54,6 @@ body{
     transition: all ease 0.3s;
 }
 
-.header-icon:hover{
-    opacity: 0.7;
-}
-
 .header-link{
     text-decoration: none;
     color: var(--background-principal);
@@ -65,7 +61,9 @@ body{
     transition: all ease 0.3s;
 }
 
-.header-link:hover{
+.header-icon:hover,
+.header-link:hover,
+#icon-link:hover{
     opacity: 0.7;
 }
 
@@ -73,6 +71,12 @@ body{
     display: flex;
     align-items: center;
     gap: 16px;
+}
+
+#icon-link{
+    color: #fff;
+    font-size: 50px;
+    transition: all ease 0.3s;
 }
 
 #btn-close{

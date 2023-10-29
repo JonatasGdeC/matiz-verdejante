@@ -13,6 +13,22 @@ function erroMensagem(){
     mensagemErro.style.display='block';
 }
 
+var vendedor
+botaoVendedor.addEventListener('click', ()=>{
+    botaoVendedor.classList.remove('button-secundario')
+    botaoVendedor.classList.add('button-principal')
+    botaoCliente.classList.remove('button-principal')
+    botaoCliente.classList.add('button-secundario')
+    vendedor = true
+})
+
+botaoCliente.addEventListener('click', ()=>{
+    botaoVendedor.classList.add('button-secundario')
+    botaoVendedor.classList.remove('button-principal')
+    botaoCliente.classList.add('button-principal')
+    botaoCliente.classList.remove('button-secundario')
+})
+
 //Validação do sistema após o click do botão "Entrar"
 botaoEntrar.addEventListener("click", () =>{
     if(usuario.value == '' || senha.value == ''){
@@ -26,23 +42,12 @@ botaoEntrar.addEventListener("click", () =>{
         usuario.classList.remove('input-error')
         senha.classList.remove('input-error')
         mensagemErro.style.display='none';
+        if(vendedor == true){
+            window.location=('./home-vendedor.html')
+        } else {
+            window.location=('./home-cliente.html')
+        }
     }
-})
-
-botaoVendedor.addEventListener('click', ()=>{
-    botaoVendedor.classList.remove('button-secundario')
-    botaoVendedor.classList.add('button-principal')
-
-    botaoCliente.classList.remove('button-principal')
-    botaoCliente.classList.add('button-secundario')
-})
-
-botaoCliente.addEventListener('click', ()=>{
-    botaoVendedor.classList.add('button-secundario')
-    botaoVendedor.classList.remove('button-principal')
-
-    botaoCliente.classList.add('button-principal')
-    botaoCliente.classList.remove('button-secundario')
 })
 
 botaoCadastrar.addEventListener("click", () =>{
