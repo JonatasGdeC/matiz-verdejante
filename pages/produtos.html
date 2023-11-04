@@ -32,11 +32,12 @@
         </div>
         <span class="material-symbols-outlined" id="menu-hamburguer">menu</span>
     </header>
-    <main class="produtos">
+    <main class="produtos container">
+        <button>Filtro</button>
         <section class="filtro">
-            <form>
-                <label for="marcas">Marcas:</label>
-                <select id="marcas">
+            <form class="filtro-form">
+                <label class="label" for="marcas">Marcas:</label>
+                <select class="input" id="marcas">
                     <option value="">Marca 1</option>
                     <option value="">Marca 2</option>
                     <option value="">Marca 3</option>
@@ -48,33 +49,33 @@
                     <option value="">Marca 9</option>
                     <option value="">Marca 10</option>
                 </select>
-                <label for="valor">Preço:</label>
-                <input type="range" min="5" max="100" step="5">
-                <label for="categorias">Categorias:</label>
+                <label class="label" for="valor">Preço:</label>
+                <input class="input" type="range" min="5" max="100" step="5">
+                <label class="label" for="categorias">Categorias:</label>
                 <div>
                     <div>
-                        <input id="todas" type="checkbox">
-                        <label for="todas">Todas</label>
+                        <input class="input" id="todas" type="checkbox">
+                        <label class="label" for="todas">Todas</label>
                     </div>
                     <div>
-                        <input id="rosto" type="checkbox">
-                        <label for="rosto">Rosto</label>
+                        <input class="input" id="rosto" type="checkbox">
+                        <label class="label" for="rosto">Rosto</label>
                     </div>
                     <div>
-                        <input id="corpo" type="checkbox">
-                        <label for="corpo">Corpo</label>
+                        <input class="input" id="corpo" type="checkbox">
+                        <label class="label" for="corpo">Corpo</label>
                     </div>
                     <div>
-                        <input id="cabelo-fem" type="checkbox">
-                        <label for="cabelo-fem">Cabelo feminino</label>
+                        <input class="input" id="cabelo-fem" type="checkbox">
+                        <label class="label" for="cabelo-fem">Cabelo feminino</label>
                     </div>
                     <div>
-                        <input id="cabelo-mas" type="checkbox">
-                        <label for="cabelo-mas">Cabelo masculino</label>
+                        <input class="input" id="cabelo-mas" type="checkbox">
+                        <label class="label" for="cabelo-mas">Cabelo masculino</label>
                     </div>
                     <div>
-                        <input id="barba" type="checkbox">
-                        <label for="barba">Barba</label>
+                        <input class="input" id="barba" type="checkbox">
+                        <label class="label" for="barba">Barba</label>
                     </div>
                 </div>
                 <button class="button button-secundario" >Aplicar</button>
@@ -85,7 +86,7 @@
                 <h2 class="title">Rosto</h2>
                 <div class="list-produtos">
                     <div class="produtos">
-                        <img src="https://via.placeholder.com/300x200.png" alt="">
+                        <img src="https://via.placeholder.com/250x200.png" alt="">
                         <h4>lorem</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis facere autem rerum velit fuga voluptate ab laborum iure assumenda dicta quod, ex minus consectetur ipsa, quaerat, culpa laboriosam atque.</p>
                         <div>
@@ -94,7 +95,7 @@
                         </div>
                     </div>
                     <div class="produtos">
-                        <img src="https://via.placeholder.com/300x200.png" alt="">
+                        <img src="https://via.placeholder.com/250x200.png" alt="">
                         <h4>lorem</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis facere autem rerum velit fuga voluptate ab laborum iure assumenda dicta quod, ex minus consectetur ipsa, quaerat, culpa laboriosam atque.</p>
                         <div>
@@ -103,7 +104,7 @@
                         </div>
                     </div>
                     <div class="produtos">
-                        <img src="https://via.placeholder.com/300x200.png" alt="">
+                        <img src="https://via.placeholder.com/250x200.png" alt="">
                         <h4>lorem</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis facere autem rerum velit fuga voluptate ab laborum iure assumenda dicta quod, ex minus consectetur ipsa, quaerat, culpa laboriosam atque.</p>
                         <div>
@@ -112,7 +113,7 @@
                         </div>
                     </div>
                     <div class="produtos">
-                        <img src="https://via.placeholder.com/300x200.png" alt="">
+                        <img src="https://via.placeholder.com/250x200.png" alt="">
                         <h4>lorem</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis facere autem rerum velit fuga voluptate ab laborum iure assumenda dicta quod, ex minus consectetur ipsa, quaerat, culpa laboriosam atque.</p>
                         <div>
@@ -121,7 +122,7 @@
                         </div>
                     </div>
                     <div class="produtos">
-                        <img src="https://via.placeholder.com/300x200.png" alt="">
+                        <img src="https://via.placeholder.com/250x200.png" alt="">
                         <h4>lorem</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis facere autem rerum velit fuga voluptate ab laborum iure assumenda dicta quod, ex minus consectetur ipsa, quaerat, culpa laboriosam atque.</p>
                         <div>
@@ -130,7 +131,7 @@
                         </div>
                     </div>
                     <div class="produtos">
-                        <img src="https://via.placeholder.com/300x200.png" alt="">
+                        <img src="https://via.placeholder.com/250x200.png" alt="">
                         <h4>lorem</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis facere autem rerum velit fuga voluptate ab laborum iure assumenda dicta quod, ex minus consectetur ipsa, quaerat, culpa laboriosam atque.</p>
                         <div>
@@ -139,7 +140,7 @@
                         </div>
                     </div>
                     <div class="produtos">
-                        <img src="https://via.placeholder.com/300x200.png" alt="">
+                        <img src="https://via.placeholder.com/250x200.png" alt="">
                         <h4>lorem</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis facere autem rerum velit fuga voluptate ab laborum iure assumenda dicta quod, ex minus consectetur ipsa, quaerat, culpa laboriosam atque.</p>
                         <div>

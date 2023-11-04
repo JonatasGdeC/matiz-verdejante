@@ -10,11 +10,13 @@ const digitosEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/ //Regra para verificação do 
 const formCliente = document.getElementById('formCliente')
 const formVendedor = document.getElementById('formVendedor')
 
-//Campos de input comuns nos dois formulários de cadastro
+//Campos de input do formulário de cadastro
 const nome = document.getElementById('name')
 const sobrenome = document.getElementById('last-name')
-const email = document.getElementById('email')
+const dataNasc = document.getElementById('data')
 const cpf = document.getElementById('cpf')
+const genero = document.getElementById('genero')
+const email = document.getElementById('email')
 const telefone = document.getElementById('celular')
 const senha1 = document.getElementById('senha')
 const senha2 = document.getElementById('repetirSenha')
@@ -27,7 +29,6 @@ const mensageSucess = document.getElementById('mensage')
 const btnClose = document.getElementById('btnClose')
 const bodyCadastro = document.getElementById('bodyCadastro')
 
-// ------------------------------> Validações em campos comuns <-----------------------------------
 
 //Validação de números e caracteres especiais no input nome
 var nomeCorreto = nome.addEventListener('keyup', (e)=>{
@@ -61,6 +62,18 @@ var sobrenomeCorreto = sobrenome.addEventListener('keyup', ()=>{
     }
 })
 
+//Verificação do campo de data de nascimento
+var dataCorreta = dataNasc.addEventListener('focusout', ()=>{
+    if(dataNasc.value == '' || dataNasc.value.length < 10){
+        createSpan.textContent='Este campo é obrigatório!'
+        dataNasc.insertAdjacentElement('afterend', createSpan)
+        return dataCorreta = false
+    } else {
+        createSpan.remove()
+        return dataCorreta = true
+    }
+})
+
 //Verificação do campo de cpf
 var cpfCorreto = cpf.addEventListener('focusout', ()=>{
     if(cpf.value == '' || cpf.value.length < 14){
@@ -70,6 +83,18 @@ var cpfCorreto = cpf.addEventListener('focusout', ()=>{
     } else{
         createSpan.remove()
         return cpfCorreto = true
+    }
+})
+
+//Verificação do campo gênero
+var generoSelecionado = genero.addEventListener('focusout', ()=>{
+    if(genero.value == ''){
+        createSpan.textContent='Selecione seu gênero!'
+        genero.insertAdjacentElement('afterend', createSpan)
+        return generoSelecionado = false
+    } else {
+        createSpan.remove()
+        return generoSelecionado = true
     }
 })
 
@@ -170,5 +195,23 @@ var senha2Correta = senha2.addEventListener('focusout', ()=>{
     } else{
         createSpan.remove()
         return senha2Correta = true
+    }
+})
+
+//Validação ao enviar o formulário
+formCliente.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    if (!nomeCorreto || !sobrenomeCorreto || !emailCorreto || !dataCorreta || !cpfCorreto || !generoSelecionado || !celularCorreto || !senha1Correta || !senha2Correta){
+        alert('Preencha todos os campos corretamente!')
+    } else{
+        mensageSucess.style.display='block'
+        btnClose.addEventListener('click', ()=>{
+            window.location=('./login.html')
+        })
+        if (mensageSucess.style.display='block') {
+            bodyCadastro.style.opacity=0.3
+        } else {
+            bodyCadastro.style.opacity='none'
+        }
     }
 })

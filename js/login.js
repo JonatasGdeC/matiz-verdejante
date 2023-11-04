@@ -4,30 +4,13 @@ const senha = document.getElementById('password')
 const mensagemErro = document.getElementById('error')
 const botaoEntrar = document.getElementById('entrar')
 const botaoCadastrar = document.getElementById('cadastrar')
-const botaoCliente = document.getElementById('cliente')
-const botaoVendedor = document.getElementById('vendedor')
 
+//Mensagem de Erro
 function erroMensagem(){
     usuario.classList.add('input-error')
     senha.classList.add('input-error')
     mensagemErro.style.display='block';
 }
-
-var vendedor
-botaoVendedor.addEventListener('click', ()=>{
-    botaoVendedor.classList.remove('button-secundario')
-    botaoVendedor.classList.add('button-principal')
-    botaoCliente.classList.remove('button-principal')
-    botaoCliente.classList.add('button-secundario')
-    vendedor = true
-})
-
-botaoCliente.addEventListener('click', ()=>{
-    botaoVendedor.classList.add('button-secundario')
-    botaoVendedor.classList.remove('button-principal')
-    botaoCliente.classList.add('button-principal')
-    botaoCliente.classList.remove('button-secundario')
-})
 
 //Validação do sistema após o click do botão "Entrar"
 botaoEntrar.addEventListener("click", () =>{
@@ -42,19 +25,11 @@ botaoEntrar.addEventListener("click", () =>{
         usuario.classList.remove('input-error')
         senha.classList.remove('input-error')
         mensagemErro.style.display='none';
-        if(vendedor == true){
-            window.location=('./Vendedor/home.html')
-        } else {
-            window.location=('./Cliente/home.html')
-        }
+        window.location=('./homeUsers.html')
     }
 })
 
-botaoCadastrar.addEventListener("click", () =>{
-    if(botaoCliente.classList.contains('button-principal')){
-        window.location=('./Cliente/cadastro.html')
-    } else {
-        window.location=('./Vendedor/cadastro.html')
-    }
+//Funcionalidade do botão cadastrar 
+botaoCadastrar.addEventListener('click', ()=>{
+    window.location=('./cadastro.html')
 })
-

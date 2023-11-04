@@ -23,7 +23,7 @@
 
 <body>
     <header class="header">
-        <a href="./home.html"><img src="../../images/logo.png" class="logo-header" alt="Logo Matiz Verdejante"></a>
+        <a href="./homeUsers.html"><img src="../../images/logo.png" class="logo-header" alt="Logo Matiz Verdejante"></a>
         <div class="header-links" id="header-links">
             <ul class="header-options">
                 <div class="header-list">
@@ -35,13 +35,65 @@
                     <a href="#" title="Meu carrinho">
                         <span class="material-symbols-outlined" id="icon-link">shopping_cart</span>
                     </a>
-                    <a href="#" title="Localizar meus pedidos">
-                        <span class="material-symbols-outlined" id="icon-link">pin_drop</span>
+                    <a href="#" title="Lista de desejos">
+                        <span class="material-symbols-outlined" id="icon-link">favorite</span>
                     </a>
-                    <a href="../login.html" title="Cliente: admin">
+                    <button class="btn-user" id="btn-user" title="Cliente: admin">
                         <img class="header-icon" src="../../images/icon-login.png" alt="Login">
-                    </a>
+                    </button>
                     <span class="material-symbols-outlined" id="btn-close">close</span>
+                    <div class="menu-user" id="menu-user">
+                        <div class="menu-user-header">
+                            <button class="btn-user" id="btn-user" title="Cliente: admin">
+                                <img class="header-icon" src="../../images/icon-login.png" alt="Login">
+                            </button>
+                            <span id="icon-link-secundary" class="material-symbols-outlined">close</span>
+                        </div>
+                        <ul class="menu-user-list">
+                            <li>
+                                <a class="menu-user-link" href="#">
+                                    <span id="icon-link-secundary" class="material-symbols-outlined">settings</span>
+                                    <p>Meu perfil</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu-user-link" href="#">
+                                    <span id="icon-link-secundary" class="material-symbols-outlined">mail</span>
+                                    <p>Mensagens</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu-user-link" href="#">
+                                    <span id="icon-link-secundary" class="material-symbols-outlined">shopping_bag</span>
+                                    <p>Minhas compras</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu-user-link" href="./novoProduto.html">
+                                    <span id="icon-link-secundary" class="material-symbols-outlined">add_circle</span>
+                                    <p>Cadastrar produtos</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu-user-link" href="#">
+                                    <span id="icon-link-secundary" class="material-symbols-outlined">storefront</span>
+                                    <p>Minhas vendas</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu-user-link" href="./login.html">
+                                    <span id="icon-link-secundary" class="material-symbols-outlined">change_circle</span>
+                                    <p>Trocar de conta</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu-user-link" href="../index.html">
+                                    <span id="icon-link-secundary" class="material-symbols-outlined">logout</span>
+                                    <p>Sair da conta</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </ul>
         </div>
@@ -61,7 +113,7 @@
             <h2 class="title title-categorias">Busque por categorias</h2>
             <ul class="categoria-list">
                 <li class="categoria-item" data-aos="fade-up" data-aos-duration="250">
-                    <a href="./pages/rosto.html"> 
+                    <a href="#"> 
                         <img class="categoria-img" src="../../images/icons-categoria/rosto.png" alt="Rosto">
                         <h3 class="categoria-link">Rosto</h3>
                     </a>
@@ -192,7 +244,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="../../js/home.js"></script>
-    <script src="../../js/rating.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/homeUsers.js"></script>
+    <script src="../js/rating.js"></script>
 </body>
 </html>

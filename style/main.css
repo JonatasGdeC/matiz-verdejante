@@ -77,12 +77,6 @@ body{
     gap: 16px;
 }
 
-#icon-link{
-    color: #fff;
-    font-size: 50px;
-    transition: all ease 0.3s;
-}
-
 #btn-close{
     color: var(--texto-secundario);
     font-size: 25px;
