@@ -34,6 +34,7 @@
     margin: 0 15px;
     border:1px solid green;
     border-radius: 6px;
+    background-color: var(--verde-secundario);
 }
 
 .produtos-img{
@@ -45,5 +46,19 @@
     text-align: center;
     font-size: 20px;
     padding: 5px 0;
+    color: var(--verde-botao);
+}
+
+.produtos-opniao,
+.produtos-buy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.produtos-preco{
+    font-size: 25px;
+    font-weight: bold;
     color: var(--verde-botao);
 }

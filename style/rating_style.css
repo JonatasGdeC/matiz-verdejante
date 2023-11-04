@@ -9,7 +9,7 @@ display: none;
 .rating label {
 float: right;
 cursor: pointer;
-color: #ccc;
+color: yellowgreen;
 transition: color 0.3s;
 }
 
@@ -55,7 +55,7 @@ animation: dislike_effect 400ms ease;
 }
 
 .btn-favorite input:checked ~ .checkmark path {
-fill: #FF5353;
+fill: green;
 stroke-width: 0;
 }
 

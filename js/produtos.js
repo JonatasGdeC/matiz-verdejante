@@ -10,12 +10,13 @@ $('.list-produtos').slick({
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
+    dots: true,
     responsive: [
     {
         breakpoint: 1024,
         settings: {
         slidesToShow: 2,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         infinite: true,
         dots: true
         }
@@ -24,8 +25,16 @@ $('.list-produtos').slick({
         breakpoint: 600,
         settings: {
         slidesToShow: 1,
-        slidesToScroll: 2
+        slidesToScroll: 1
         }
     }
     ]
 });
+
+function estaLogado(){
+    if (localStorage.getItem('https://matiz-verdejante.vercel.app/')) {
+        window.location=('./login.html')
+    } else{
+        alert('usuário logado!')
+    }
+}
