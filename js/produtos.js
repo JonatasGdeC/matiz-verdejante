@@ -32,8 +32,9 @@ $('.list-produtos').slick({
 });
 
 function estaLogado(){
-    if (localStorage.getItem('https://matiz-verdejante.vercel.app/')) {
+    if (localStorage.getItem('index')) {
         window.location=('./login.html')
+        localStorage.clear()
     } else{
         alert('usuário logado!')
     }
