@@ -1,6 +1,8 @@
 const btnFiltro = document.getElementById('btn-filtro')
 const filtro = document.getElementById('filtro')
 
+localStorage.setItem('index', window.location.href)
+
 btnFiltro.addEventListener('click',()=>{
     filtro.classList.toggle('filtro-aberto')
 })
@@ -32,10 +34,10 @@ $('.list-produtos').slick({
 });
 
 function estaLogado(){
-    if (localStorage.getItem('index')) {
+    const paginaAnterior = document.referrer;
+    if(paginaAnterior == 'https://matiz-verdejante.vercel.app/index.html'){
         window.location=('./login.html')
-        localStorage.clear()
     } else{
-        alert('usuário logado!')
+        alert('Falta criar página de compra!!!')
     }
 }

@@ -1,5 +1,3 @@
-localStorage.setItem('index', window.location.href)
-
 $('.carrossel').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
