@@ -1,3 +1,10 @@
+const btnFiltro = document.getElementById('btn-filtro')
+const filtro = document.getElementById('filtro')
+
+btnFiltro.addEventListener('click',()=>{
+    filtro.classList.toggle('filtro-aberto')
+})
+
 $('.list-produtos').slick({
     infinite: true,
     speed: 300,

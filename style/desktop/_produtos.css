@@ -11,6 +11,10 @@
     display: none;
 }
 
+.filtro-aberto{
+    display: block;
+}
+
 .filtro-form{
     display: flex;
     flex-direction: column;
@@ -26,7 +30,20 @@
     justify-content: center;
 }
 
-.produtos{
-    max-width: 300px;
+.produtos-item{
+    margin: 0 15px;
+    border:1px solid green;
+    border-radius: 6px;
+}
+
+.produtos-img{
     width: 100%;
+    border-radius: 6px;
+}
+
+.produtos-title{
+    text-align: center;
+    font-size: 20px;
+    padding: 5px 0;
+    color: var(--verde-botao);
 }
