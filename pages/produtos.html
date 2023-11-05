@@ -17,7 +17,7 @@
 </head>
 <body>
     <header class="header">
-        <a href="../index.html"><img src="../images/logo.png" class="logo-header" alt="Logo Matiz Verdejante"></a>
+        <img onclick="estaLogadoLogo()" id="logo-site" src="../images/logo.png" class="logo-header" alt="Logo Matiz Verdejante">
         <div class="header-links" id="header-links">
             <ul class="header-options">
                 <div class="header-list">
@@ -26,10 +26,62 @@
                     <li><a class="header-link" href="#">Contato</a></li>
                 </div>
                 <div class="header-menu">
-                    <a href="./login.html" title="Login">
+                    <a onclick="estaLogadoMenu()" id="btn-user">
                         <img class="header-icon" src="../images/icon-login.png" alt="Login">
                     </a>
                     <span class="material-symbols-outlined" id="btn-close">close</span>
+                    <div class="menu-user" id="menu-user">
+                        <div class="menu-user-header">
+                            <button class="btn-user" id="btn-user" title="Cliente: admin">
+                                <img class="header-icon" src="../../images/icon-login.png" alt="Login">
+                            </button>
+                            <span id="icon-link-secundary" class="material-symbols-outlined">close</span>
+                        </div>
+                        <ul class="menu-user-list">
+                            <li>
+                                <a class="menu-user-link" href="#">
+                                    <span id="icon-link-secundary" class="material-symbols-outlined">settings</span>
+                                    <p>Meu perfil</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu-user-link" href="#">
+                                    <span id="icon-link-secundary" class="material-symbols-outlined">mail</span>
+                                    <p>Mensagens</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu-user-link" href="#">
+                                    <span id="icon-link-secundary" class="material-symbols-outlined">shopping_bag</span>
+                                    <p>Minhas compras</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu-user-link" href="./novoProduto.html">
+                                    <span id="icon-link-secundary" class="material-symbols-outlined">add_circle</span>
+                                    <p>Cadastrar produtos</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu-user-link" href="#">
+                                    <span id="icon-link-secundary" class="material-symbols-outlined">storefront</span>
+                                    <p>Minhas vendas</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu-user-link" href="./login.html">
+                                    <span id="icon-link-secundary" class="material-symbols-outlined">change_circle</span>
+                                    <p>Trocar de conta</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu-user-link" href="../index.html">
+                                    <span id="icon-link-secundary" class="material-symbols-outlined">logout</span>
+                                    <p>Sair da conta</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </ul>
         </div>
@@ -119,7 +171,7 @@
                         </div>
                         <div class="produtos-buy">
                             <p class="produtos-preco">R$ --,--</p>
-                            <button onclick="estaLogado()" class="button button-principal">Comprar</button>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
                         </div>
                     </div>
                     <div class="produtos-item">
@@ -149,7 +201,7 @@
                         </div>
                         <div class="produtos-buy">
                             <p class="produtos-preco">R$ --,--</p>
-                            <button onclick="estaLogado()" class="button button-principal">Comprar</button>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
                         </div>
                     </div>
                     <div class="produtos-item">
@@ -179,7 +231,7 @@
                         </div>
                         <div class="produtos-buy">
                             <p class="produtos-preco">R$ --,--</p>
-                            <button onclick="estaLogado()" class="button button-principal">Comprar</button>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
                         </div>
                     </div>
                     <div class="produtos-item">
@@ -209,7 +261,7 @@
                         </div>
                         <div class="produtos-buy">
                             <p class="produtos-preco">R$ --,--</p>
-                            <button onclick="estaLogado()" class="button button-principal">Comprar</button>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
                         </div>
                     </div>
                     <div class="produtos-item">
@@ -239,7 +291,7 @@
                         </div>
                         <div class="produtos-buy">
                             <p class="produtos-preco">R$ --,--</p>
-                            <button onclick="estaLogado()" class="button button-principal">Comprar</button>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
                         </div>
                     </div>
                     <div class="produtos-item">
@@ -269,7 +321,7 @@
                         </div>
                         <div class="produtos-buy">
                             <p class="produtos-preco">R$ --,--</p>
-                            <button onclick="estaLogado()" class="button button-principal">Comprar</button>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
                         </div>
                     </div>
                     <div class="produtos-item">
@@ -299,7 +351,867 @@
                         </div>
                         <div class="produtos-buy">
                             <p class="produtos-preco">R$ --,--</p>
-                            <button onclick="estaLogado()" class="button button-principal">Comprar</button>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="produtos-categoria">
+                <h2 class="title">Corpo</h2>
+                <div class="list-produtos">
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="produtos-categoria">
+                <h2 class="title">Cabelo Feminino</h2>
+                <div class="list-produtos">
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="produtos-categoria">
+                <h2 class="title">Cabelo masculino</h2>
+                <div class="list-produtos">
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="produtos-categoria">
+                <h2 class="title">Barba</h2>
+                <div class="list-produtos">
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produtos-item">
+                        <img class="produtos-img" src="https://via.placeholder.com/250x200.png" alt="">
+                        <h4 class="produtos-title">lorem</h4>
+                        <div class="produtos-opniao">
+                            <label class="btn-favorite">
+                                <input checked="checked" type="checkbox">
+                                <div class="checkmark">
+                                    <svg viewBox="0 0 256 256">
+                                    <rect fill="none" height="256" width="256"></rect>
+                                    <path d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" stroke-width="20px" stroke="#FFF" fill="none"></path></svg>
+                                </div>
+                            </label>
+                            <div class="rating">
+                                <input value="5" id="star5" type="checkbox">
+                                <label for="star5"></label>
+                                <input value="4" id="star4" type="checkbox">
+                                <label for="star4"></label>
+                                <input value="3" id="star3" type="checkbox">
+                                <label for="star3"></label>
+                                <input value="2" id="star2" type="checkbox">
+                                <label for="star2"></label>
+                                <input value="1" id="star1" type="checkbox">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="produtos-buy">
+                            <p class="produtos-preco">R$ --,--</p>
+                            <button onclick="estaLogadoParaComprar()" class="button button-principal">Comprar</button>
                         </div>
                     </div>
                 </div>

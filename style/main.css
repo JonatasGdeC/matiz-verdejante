@@ -31,7 +31,8 @@ body{
 }
 
 .logo-header{
-    width: 90px; 
+    width: 90px;
+    cursor: pointer;
 }
 
 .header-links{
@@ -88,6 +89,61 @@ body{
     font-size: 25px;
     display: none;
 }
+
+.btn-user{
+    background:none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-user{
+    background-color: var(--verde-botao);
+    padding: 16px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.menu-user-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#icon-link{
+    color: #fff;
+    font-size: 50px;
+    transition: all ease 0.3s;
+}
+
+#icon-link-secundary{
+    color: #fff;
+    font-size: 30px;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+.menu-user-list{
+    padding-top: 20px;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-user-link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: all ease 0.3s;
+}
+
+.menu-user-link:hover{
+    opacity: 0.7;
+}
+
 
 .title{
     color: var(--verde-principal);

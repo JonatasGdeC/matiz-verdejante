@@ -4,6 +4,7 @@ const senha = document.getElementById('password')
 const mensagemErro = document.getElementById('error')
 const botaoEntrar = document.getElementById('entrar')
 const botaoCadastrar = document.getElementById('cadastrar')
+const botaoVoltar = document.getElementById('btn-voltar')
 
 //Mensagem de Erro
 function erroMensagem(){
@@ -32,4 +33,10 @@ botaoEntrar.addEventListener("click", () =>{
 //Funcionalidade do botão cadastrar 
 botaoCadastrar.addEventListener('click', ()=>{
     window.location=('./cadastro.html')
+})
+
+//Funcionalidade do botão voltar
+botaoVoltar.addEventListener('click',()=>{
+    const paginaAnterior = document.referrer;
+    window.location=(paginaAnterior)
 })
