@@ -49,9 +49,7 @@ function estaLogadoLogo(){
 
 function estaLogadoMenu(){
     const paginaAnterior = document.referrer;
-    if(paginaAnterior == 'https://matiz-verdejante.vercel.app/index.html' || /*Apenas para desenvolvimento -->*/paginaAnterior == 'http://127.0.0.1:5500/index.html'){
-        window.location=('./login.html')
-    } else{
+    if(paginaAnterior == 'https://matiz-verdejante.vercel.app/pages/homeUsers.html' || /*Apenas para desenvolvimento -->*/paginaAnterior == 'http://127.0.0.1:5500/pages/homeUsers.html'){
         const btnUser = document.getElementById('btn-user')
         const menuUser = document.getElementById('menu-user')
         const closeMenuUser = document.getElementById('icon-link-secundary')
@@ -59,18 +57,19 @@ function estaLogadoMenu(){
         btnUser.addEventListener('click', ()=>{
             menuUser.style.display='block'
         })
-
         closeMenuUser.addEventListener('click', ()=>{
             menuUser.style.display='none'
         })
+    } else{
+        window.location=('./login.html')
     }
 }
 
 function estaLogadoParaComprar(){
     const paginaAnterior = document.referrer;
-    if(paginaAnterior == 'https://matiz-verdejante.vercel.app/index.html' || /*Apenas para desenvolvimento -->*/paginaAnterior == 'http://127.0.0.1:5500/index.html'){
-        window.location=('./login.html')
-    } else{
+    if(paginaAnterior == 'https://matiz-verdejante.vercel.app/pages/homeUsers.html' || /*Apenas para desenvolvimento -->*/paginaAnterior == 'http://127.0.0.1:5500/pages/homeUsers.html'){
         alert('Falta criar página de compra!!!')
+    } else{
+        window.location=('./login.html')
     }
 }
