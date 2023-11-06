@@ -35,6 +35,12 @@ body{
     cursor: pointer;
 }
 
+.favorito-icon{
+    width: 1px;
+    height: 1px; 
+    cursor: pointer;
+}
+
 .header-links{
     width: 100%;
     display: flex;
