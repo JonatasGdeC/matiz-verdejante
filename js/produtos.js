@@ -35,7 +35,6 @@ $('.list-produtos').slick({
 
 function estaLogadoLogo(){
     const logoSite = document.getElementById('logo-site')
-
     logoSite.addEventListener('click',()=>{
         const paginaAnterior = document.referrer;
         if(paginaAnterior == 'https://matiz-verdejante.vercel.app/index.html' || /*Apenas para desenvolvimento -->*/paginaAnterior == 'http://127.0.0.1:5500/index.html'){
@@ -73,3 +72,19 @@ function estaLogadoParaComprar(){
         window.location=('./login.html')
     }
 }
+
+const btnHamburguer = document.getElementById('menu-hamburguer')
+const links = document.getElementById('header-links')
+const btnCloseMenu = document.getElementById('btn-close')
+
+btnHamburguer.addEventListener('click', ()=>{
+    btnHamburguer.style.display='none'
+    btnCloseMenu.style.display='block'
+    links.style.display='block'
+})
+
+btnCloseMenu.addEventListener('click', ()=>{
+    btnHamburguer.style.display='block'
+    links.style.display='none'
+    btnCloseMenu.style.display='none'
+})

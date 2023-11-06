@@ -1,9 +1,5 @@
 @import url('../_variaveis.css');
 
-#btn-voltar{
-    cursor: pointer;
-}
-
 .form-buttons{
     display: flex;
     flex-direction: column;

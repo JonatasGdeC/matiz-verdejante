@@ -7,20 +7,33 @@
     <link rel="shortcut icon" href="../../images/logo.png">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="../../style/main.css">
+    <link rel="stylesheet" href="../style/desktop/_cadastro.css">
+    <link rel="stylesheet" href="../style/main.css">
 </head>
 <body>
     <div class="header header-secundary">
         <a href="./homeUsers.html">
             <span class="material-symbols-outlined button-back">arrow_back_ios</span>
         </a>
-        <h2 class="title-aba">Cadastro de novo produto</h2>
     </div>
     <form class="form">
+        <h2 class="title">Cadastro de novo produto</h2>
         <label class="label" for="nome">Nome do Produto:</label>
         <input class="input" id="nome" type="text">
         <label class="label" for="marca">Marca:</label>
-        <input class="input" id="marca" type="text">
+        <select class="input" id="marca">
+            <option value=""></option>
+            <option value="">Marca 1</option>
+            <option value="">Marca 2</option>
+            <option value="">Marca 3</option>
+            <option value="">Marca 4</option>
+            <option value="">Marca 5</option>
+            <option value="">Marca 6</option>
+            <option value="">Marca 7</option>
+            <option value="">Marca 8</option>
+            <option value="">Marca 9</option>
+            <option value="">Marca 10</option>
+        </select>
         <label class="label" for="categoria">Categoria:</label>
         <select class="input" id="categoria">
             <option value=""></option>
@@ -49,5 +62,8 @@
         <input class="input" type="text" id="preco">
         <button type="submit" class="button button-principal">Cadastrar</button>
     </form>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/plugins-jquery/jquery.mask.min.js"></script>
+    <script src="../js/novoProduto.js"></script>
 </body>
 </html>
