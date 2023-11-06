@@ -2,7 +2,7 @@
 
 .favorito-icon
 {
-    width: 1px;
+    width: 1px !important;
     height: 1px; 
     cursor: pointer;
 }
