@@ -1,2 +1,7 @@
 @import url('./_variaveis.css');
-@import url('./_main.css');
+
+.favorito-icon
+{
+    width: 15px;
+    cursor: pointer;
+}
