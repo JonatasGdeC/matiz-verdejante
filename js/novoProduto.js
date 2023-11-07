@@ -48,10 +48,14 @@ genero.addEventListener('focusout', ()=>{
 
 
 var caracteresMin = 150
+var caracteresDig = 0
+var caracteresFal = caracteresMin - caracteresDig
 
 descricao.addEventListener('keypress',()=>{
-    caracteresMin -=1
-    createSpan.textContent=`Digite pelo menos ${caracteresMin} caracteres!`
+    createSpan.textContent=`Digite pelo menos ${caracteresFal} caracteres!`
     descricao.insertAdjacentElement('afterend', createSpan)
 
+    if(descricao.value.length < caracteresMin){
+        caracteresDig +=1
+    }
 })
