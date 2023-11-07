@@ -234,11 +234,28 @@ body{
     background-color: var(--verde-principal);
     text-align: center;
     color: var(--background-principal);
-    padding: 12px 0;
+    padding: 25px 0;
 }
 
 .footer-logo{
     width: 120px;
+    margin-bottom: 25px;
+}
+
+.footer-list{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.footer-link{
+    color: #fff;
+    transition: all ease .3s;
+}
+
+.footer-link:hover{
+    opacity: .7;
 }
 
 @media (max-width: 1024px) {
