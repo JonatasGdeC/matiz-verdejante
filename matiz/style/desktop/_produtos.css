@@ -1,0 +1,64 @@
+@import url('../_variaveis.css');
+
+.produtos{
+    display: flex;
+    flex-direction: column;
+}
+
+.filtro{
+    background-color: var(--verde-secundario);
+    width: 100%;
+    display: none;
+}
+
+.filtro-aberto{
+    display: block;
+}
+
+.filtro-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 30px;
+}
+
+.produtos-categoria{
+    padding: 0 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.produtos-item{
+    margin: 0 15px;
+    border:1px solid green;
+    border-radius: 6px;
+    background-color: var(--verde-secundario);
+}
+
+.produtos-img{
+    width: 100%;
+    border-radius: 6px;
+}
+
+.produtos-title{
+    text-align: center;
+    font-size: 20px;
+    padding: 5px 0;
+    color: var(--verde-botao);
+}
+
+.produtos-opniao,
+.produtos-buy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.produtos-preco{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--verde-botao);
+}

@@ -1,0 +1,58 @@
+body {
+    background: rgba(56, 128, 15);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+form {
+    background: rgb(168, 227, 168);
+    display: flex; 
+    flex-flow: column wrap;
+    padding: 40px;
+    border-radius: 10px;
+    border: solid 1px;
+}
+
+input {
+    width: 90%;
+    height: 30px;
+    margin: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+textarea{
+    width: 90%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+button{
+    background-color: rgb(1, 77, 1);
+    color: aliceblue;
+    padding: 15px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background: rgb(1, 107, 1);
+
+}
+
+.mensagens{
+
+    display: flex;
+    flex-flow: column;
+    background: rgb(168, 227, 168);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: solid 1px;
+}

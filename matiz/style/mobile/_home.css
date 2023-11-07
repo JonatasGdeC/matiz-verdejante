@@ -1,0 +1,23 @@
+@media (max-width: 760px){
+    .logo-header{
+        max-width: 60px; 
+    }
+
+    .carrossel-image{
+        height: 80px;
+    }
+
+    .categoria-item{
+        border-radius: 0;
+        height: auto;
+    }
+
+    .categoria-link{
+        display: none;
+    }
+
+    .categoria-img{
+        border: none;
+        border-radius: 0;
+    }
+}
