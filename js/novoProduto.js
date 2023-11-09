@@ -1,3 +1,7 @@
+$('#preco').mask("#.##0,00", {reverse: true})
+$('#cep').mask('00000-000')
+
+
 const createSpan = document.createElement('span')
 const regex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/; //Regra de existência de caracteres especiais
 
@@ -43,19 +47,5 @@ genero.addEventListener('focusout', ()=>{
         genero.insertAdjacentElement('afterend', createSpan)
     } else{
         createSpan.remove()
-    }
-})
-
-
-var caracteresMin = 150
-var caracteresDig = 0
-var caracteresFal = caracteresMin - caracteresDig
-
-descricao.addEventListener('keypress',()=>{
-    createSpan.textContent=`Digite pelo menos ${caracteresFal} caracteres!`
-    descricao.insertAdjacentElement('afterend', createSpan)
-
-    if(descricao.value.length < caracteresMin){
-        caracteresDig +=1
     }
 })
