@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+
     <link rel="stylesheet" href="../style/main.css">
     <link rel="stylesheet" href="../style/desktop/_login.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <div class="header header-secundary">
-        <a onclick="voltarTelaAnterior()" id="btn-voltar">
-            <span class="material-symbols-outlined button-back">arrow_back_ios</span>
-        </a>
+        <div id="btn-voltar" class="button-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+        </div>
     </div>
     <form class="form">
         <span class="mensagem-erro" id="error"></span>

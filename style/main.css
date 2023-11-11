@@ -55,7 +55,8 @@ body{
 }
 
 .header-icon{
-    width: 50px;
+    cursor: pointer;
+    color: #fff;
     transition: all ease 0.3s;
 }
 
@@ -88,12 +89,6 @@ body{
     color: var(--texto-secundario);
     font-size: 25px;
     display: none;
-}
-
-.btn-user{
-    background:none;
-    border: none;
-    cursor: pointer;
 }
 
 .menu-user{
@@ -221,8 +216,6 @@ body{
 }
 
 .button-back {
-    background: none;
-    text-decoration: none;
     color: var(--texto-secundario);
 }
 
