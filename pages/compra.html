@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados de compra</title>
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+<body>
+    <header class="header header-secundary">
+        <div id="btn-voltar" class="button-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+        </div>
+    </header>
+    <section class="container">
+        <form class="form" id="formEntrega">
+            <legend class="title">Endereço de entrega</legend>
+            <label class="label" for="cep">CEP:</label>
+            <input class="input" id="cep" type="text">
+            <label class="label" for="endereco">Endereço:</label>
+            <input class="input" type="text" id="endereco">
+            <label class="label" for="numero">Número</label>
+            <input class="input" type="number" id="numero">
+            <label class="label" for="bairro">Bairro:</label>
+            <input class="input" type="text" id="bairro">
+            <label class="label" for="cidade">Cidade:</label>
+            <input class="input" type="text" id="cidade">
+            <label class="label" for="estado">Estado:</label>
+            <select class="input" name="" id="estado">
+                <option value=""></option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+            </select>
+            <div>
+                <input class="input" type="checkbox" id="presente">
+                <label class="label" for="presente">Presente para alguém</label>
+            </div>
+            <button id="btn-form-entrega" class="button button-principal">Próximo</button>
+        </form>
+    </section>
+
+    <script src="../js/compra.js"></script>
+</body>
+</html>

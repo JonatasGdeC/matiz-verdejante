@@ -1,5 +1,6 @@
 const btnFiltro = document.getElementById("btn-filtro");
 const filtro = document.getElementById("filtro");
+const produtos = document.getElementById("produtos");
 const modal = document.getElementById("modal");
 const btnCloseModal = document.getElementById("close-modal");
 
@@ -36,6 +37,8 @@ $(".list-produtos").slick({
 });
 
 function verMais(){
+    produtos.style.display='none'
+    btnFiltro.style.display='none'
     modal.style.display='block'
 }
 
@@ -61,7 +64,7 @@ function estaLogadoMenu() {
         paginaAnterior ==
         "https://matiz-verdejante.vercel.app/pages/homeUsers.html" ||
         /*Apenas para desenvolvimento -->*/ paginaAnterior ==
-        "http://127.0.0.1:5500/pages/homeUsers.html"
+        "http://127.0.0.1:5500/pages/homeUsers.html" 
     ) {
         const btnUser = document.getElementById("btn-user");
         const menuUser = document.getElementById("menu-user");
@@ -86,7 +89,7 @@ function estaLogadoMenu() {
         /*Apenas para desenvolvimento -->*/ paginaAnterior ==
         "http://127.0.0.1:5500/pages/homeUsers.html"
     ) {
-        alert('criar nova página!!!')
+        window.location = "compra.html"
     } else {
         window.location = "login.html";
     }
@@ -110,5 +113,15 @@ btnCloseMenu.addEventListener("click", () => {
 
 
 btnCloseModal.addEventListener('click', ()=>{
+    produtos.style.display='block'
+    btnFiltro.style.display='block'
     modal.style.display='none'
 })
+
+$(".img-produto").slick({
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true
+});
