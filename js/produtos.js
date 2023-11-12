@@ -1,5 +1,7 @@
 const btnFiltro = document.getElementById("btn-filtro");
 const filtro = document.getElementById("filtro");
+const modal = document.getElementById("modal");
+const btnCloseModal = document.getElementById("close-modal");
 
 localStorage.setItem("index", window.location.href);
 
@@ -32,6 +34,10 @@ $(".list-produtos").slick({
         },
     ],
 });
+
+function verMais(){
+    modal.style.display='block'
+}
 
 function estaLogadoLogo() {
     const logoSite = document.getElementById("logo-site");
@@ -80,7 +86,7 @@ function estaLogadoMenu() {
         /*Apenas para desenvolvimento -->*/ paginaAnterior ==
         "http://127.0.0.1:5500/pages/homeUsers.html"
     ) {
-        window.location = "../pages/compra.html";
+        alert('criar nova página!!!')
     } else {
         window.location = "../pages/login.html";
     }
@@ -101,3 +107,8 @@ btnCloseMenu.addEventListener("click", () => {
     links.style.display = "none";
     btnCloseMenu.style.display = "none";
 });
+
+
+btnCloseModal.addEventListener('click', ()=>{
+    modal.style.display='none'
+})
