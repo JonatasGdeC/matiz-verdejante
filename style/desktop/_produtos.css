@@ -64,7 +64,7 @@
 }
 
 .modal{
-    /* display: none; */
+    display: none;
     position: fixed;
     z-index: 2; 
     left: 0;
@@ -102,4 +102,10 @@
 
 .button-modal{
     width: 100%;
+}
+
+@media (max-width: 1024px){
+    .modal-body{
+        flex-direction: column;
+    }
 }

@@ -74,7 +74,7 @@ function estaLogadoMenu() {
         menuUser.style.display = "none";
         });
     } else {
-        window.location = "./pages/login.html";
+        window.location = "login.html";
     }
     }
 
@@ -88,7 +88,7 @@ function estaLogadoMenu() {
     ) {
         alert('criar nova página!!!')
     } else {
-        window.location = "../pages/login.html";
+        window.location = "login.html";
     }
     }
 
