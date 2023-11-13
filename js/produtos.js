@@ -61,10 +61,10 @@ function estaLogadoLogo() {
 function estaLogadoMenu() {
     const paginaAnterior = document.referrer;
     if (
-        paginaAnterior ==
-        "https://matiz-verdejante.vercel.app/pages/homeUsers.html" ||
-        /*Apenas para desenvolvimento -->*/ paginaAnterior ==
-        "http://127.0.0.1:5500/pages/homeUsers.html" 
+        paginaAnterior == "https://matiz-verdejante.vercel.app/pages/homeUsers.html" ||
+        /*Apenas para desenvolvimento -->*/ paginaAnterior == "http://127.0.0.1:5500/pages/homeUsers.html" || 
+        paginaAnterior == "https://matiz-verdejante.vercel.app/pages/compra.html" ||
+        /*Apenas para desenvolvimento -->*/ paginaAnterior == "http://127.0.0.1:5500/pages/compra.html"
     ) {
         const btnUser = document.getElementById("btn-user");
         const menuUser = document.getElementById("menu-user");
@@ -84,10 +84,10 @@ function estaLogadoMenu() {
     function estaLogadoParaComprar() {
     const paginaAnterior = document.referrer;
     if (
-        paginaAnterior ==
-        "https://matiz-verdejante.vercel.app/pages/homeUsers.html" ||
-        /*Apenas para desenvolvimento -->*/ paginaAnterior ==
-        "http://127.0.0.1:5500/pages/homeUsers.html"
+        paginaAnterior == "https://matiz-verdejante.vercel.app/pages/homeUsers.html" ||
+        /*Apenas para desenvolvimento -->*/ paginaAnterior == "http://127.0.0.1:5500/pages/homeUsers.html" || 
+        paginaAnterior == "https://matiz-verdejante.vercel.app/pages/compra.html" ||
+        /*Apenas para desenvolvimento -->*/ paginaAnterior == "http://127.0.0.1:5500/pages/compra.html"
     ) {
         window.location = "compra.html"
     } else {

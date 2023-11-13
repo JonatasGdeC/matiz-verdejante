@@ -74,13 +74,17 @@ preco.addEventListener("focusout", () => {
     }
 });
 
+function zeraEntradas(){
+    endereco.value = "";
+    bairro.value = "";
+    cidade.value = "";
+}
+
 cep.addEventListener("focusout", () => {
     if (cep.value == "" || cep.value.length < 9) {
         createSpan.textContent = "Preencha este campo corretamente!";
         cep.insertAdjacentElement("afterend", createSpan);
-        endereco.value = "";
-        bairro.value = "";
-        cidade.value = "";
+        zeraEntradas()
     } else {
         createSpan.remove();
         const valorCep = cep.value;
@@ -91,9 +95,13 @@ cep.addEventListener("focusout", () => {
             return resposta.json();
         })
         .then(function (json) {
-            endereco.value = json.logradouro;
-            bairro.value = json.bairro;
-            cidade.value = json.localidade;
+            if(json.erro == true){
+                zeraEntradas()
+            } else{
+                endereco.value = json.logradouro;
+                bairro.value = json.bairro;
+                cidade.value = json.localidade;
+            }
         });
     }
 });
