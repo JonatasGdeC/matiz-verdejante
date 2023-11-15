@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Produto</title>
+    <link rel="shortcut icon" href="../images/logo.png">
+
+    <link rel="stylesheet" href="../style/desktop/_cadastro.css">
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+<body>
+    <div class="header header-secundary">
+        <a href="./homeUsers.html" class="button-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+        </a>
+    </div>
+    <form class="form">
+        <h2 class="title">Cadastro de novo produto</h2>
+        <label class="label" for="nome">Nome do Produto:</label>
+        <input class="input" id="nome" type="text" required>
+        <label class="label" for="marca">Marca:</label>
+        <select class="input" id="marca" required>
+            <option value=""></option>
+            <option value="Marca 1">Marca 1</option>
+            <option value="Marca 2">Marca 2</option>
+            <option value="Marca 3">Marca 3</option>
+            <option value="Marca 4">Marca 4</option>
+            <option value="Marca 5">Marca 5</option>
+            <option value="Marca 6">Marca 6</option>
+            <option value="Marca 7">Marca 7</option>
+            <option value="Marca 8">Marca 8</option>
+            <option value="Marca 9">Marca 9</option>
+            <option value="Marca 10">Marca 10</option>
+        </select>
+        <label class="label" for="categoria">Categoria:</label>
+        <select class="input" id="categoria" required>
+            <option value=""></option>
+            <option value="Rosto">Rosto</option>
+            <option value="Corpo">Corpo</option>
+            <option value="Cabelo-Fem">Cabelo Feminino</option>
+            <option value="Cabelo-Mas">Cabelo Masculino</option>
+            <option value="Barba">Barba</option>
+        </select>
+        <label class="label" for="genero">Gênero:</label>
+        <select class="input" id="genero" required>
+            <option value=""></option>
+            <option value="Unissex">Unissex</option>
+            <option value="Fem">Feminino</option>
+            <option value="Masc">Masculino</option>
+        </select>
+        <label class="label" for="descricao">Descrição:</label>
+        <textarea class="input" id="descricao" cols="30" rows="10" minlength="150" required></textarea>
+        <label class="label" for="historico">Histórico de sustentabilidade:</label>
+        <textarea class="input" id="historico" cols="30" rows="10" required></textarea>
+        <label class="label" for="image">Imagens de Divulgação:</label>
+        <input class="input" id="image" type="file" accept="image/*" required>
+        <label class="label" for="quantidade">Quantidade disponível:</label>
+        <input class="input" id="quantidade" type="number" required>
+        <label class="label" for="preco">Preço:</label>
+        <input class="input" type="text" id="preco" required>
+        <legend class="title">Endereço de origem</legend>
+        <label class="label" for="cep">CEP:</label>
+        <input class="input" type="text" id="cep" required>
+        <label class="label" for="endereco">Endereço:</label>
+        <input class="input" type="text" id="endereco" disabled>
+        <label class="label" for="bairro">Bairro:</label>
+        <input class="input" type="text" id="bairro" disabled>
+        <label class="label" for="cidade">Cidade:</label>
+        <input class="input" type="text" id="cidade" disabled>
+        <button type="submit" class="button button-principal">Cadastrar</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/plugins-jquery/jquery.mask.min.js"></script>
+    <script src="../js/novoProduto.js"></script>
+</body>
+</html>

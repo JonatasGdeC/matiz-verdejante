@@ -1,0 +1,50 @@
+@import url('../_variaveis.css');
+@media (max-width: 1024px){
+    .carrosselECategorias{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .categorias{
+        background-color: var(--verde-secundario);
+    }
+
+    .title{
+        font-size: 20px;
+        padding: 8px 0;
+    }
+
+    .title-categorias{
+        color: var(--text-terciario);
+    }
+
+    .categoria-item{
+        border-radius: 0;
+        max-height: 100px;
+        background-color: var(--verde-secundario);
+    }
+
+    .categoria-link{
+        font-size: 10px;
+    }
+
+    .categoria-img{
+        width: 50px;
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: 100%;
+    }
+
+    .destaque-item{
+        max-width: 80vh;
+    }
+    
+    .destaque-img{
+        max-width: 100vh;
+    }
+
+    .destaque-title{
+        text-align: left;
+        font-size: 16px;
+    }
+}

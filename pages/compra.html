@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados de compra</title>
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/desktop/_compra.css">
+</head>
+<body>
+    <header class="header header-secundary">
+        <div id="btn-voltar" class="button-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+        </div>
+    </header>
+    <section class="container">
+        <form class="form" id="formEntrega">
+            <legend class="title">Endereço de entrega</legend>
+            <label class="label" for="cep">CEP:</label>
+            <input class="input" id="cep" type="tel" required>
+            <label class="label" for="endereco">Endereço:</label>
+            <input class="input" type="text" id="endereco" required>
+            <label class="label" for="numero">Número</label>
+            <input class="input" type="tel" id="numero" required>
+            <label class="label" for="bairro">Bairro:</label>
+            <input class="input" type="text" id="bairro" required>
+            <label class="label" for="cidade">Cidade:</label>
+            <input class="input" type="text" id="cidade" required>
+            <label class="label" for="estado">Estado:</label>
+            <select class="input" name="" id="estado" required>
+                <option value=""></option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+            </select>
+            <div>
+                <input class="input" type="checkbox" id="presente">
+                <label class="label" for="presente">Presente para outra pessoa</label>
+            </div>
+            <div class="nomeReceptor" id="nomeReceptor">
+                <label class="label" for="nomeCliente">Nome:</label>
+                <input class="input" type="text" id="nomeCliente" required>
+            </div>
+            <button id="btn-form-entrega" class="button button-principal">Pagamento</button>
+        </form>
+        <form class="form" id="formPagamento">
+            <legend class="title">Forma de pagamento</legend>
+            <label class="label">Selecione a forma de pagamento:</label>
+            <div class="pagamento">
+                <div class="pagamento-forma">
+                    <input type="radio" name="formaPagamento" id="pix">
+                    <label class="pagamento-forma-label" for="pix">
+                        <img class="pagamento-icon" src="../images/icons-pagamento/pix.png" alt="Pix">
+                        <div>
+                            <h4>Pix</h4>
+                            <p>O código Pix gerado para o pagamento é válido por 30 minutos após a finalização do pedido.</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="pagamento-forma">
+                    <input type="radio" name="formaPagamento" id="boleto">
+                    <label class="pagamento-forma-label" for="boleto">
+                        <img class="pagamento-icon" src="../images/icons-pagamento/boleto.jpg" alt="Boleto">
+                        <div>
+                            <h4>Boleto</h4>
+                            <p>Vencimento em 1 dia útil.</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="pagamento-forma">
+                    <input type="radio" name="formaPagamento" id="cartao">
+                    <label class="pagamento-forma-label" for="cartao">
+                        <img class="pagamento-icon" src="../images/icons-pagamento/cartao.jfif" alt="Cartao">
+                        <div>
+                            <h4>Cartão de crédito</h4>
+                            <p>Aceitamos várias bandeiras de cartão de crédito</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="cadastroCartao" id="cadastroCartao">
+                <legend class="title">Adicionar um cartão de crédito</legend>
+                <label class="label" for="numeroCartao">Número do cartão</label>
+                <input class="input" type="number">
+                <label class="label" for="nomeCartao">Nome no cartão</label>
+                <input class="input" type="text" id="nomeCartao">
+                <label class="label" for="dataExpiracao">Data de expiração</label>
+                <div>
+                    <select class="input">
+                        <option value=""></option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <select class="input">
+                        <option value=""></option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                        <option value="2031">2031</option>
+                        <option value="2032">2032</option>
+                        <option value="2033">2033</option>
+                        <option value="2034">2034</option>
+                        <option value="2035">2035</option>
+                        <option value="2036">2036</option>
+                        <option value="2037">2037</option>
+                        <option value="2038">2038</option>
+                        <option value="2039">2039</option>
+                        <option value="2040">2040</option>
+                        <option value="2041">2041</option>
+                        <option value="2042">2042</option>
+                        <option value="2043">2043</option>
+                    </select>
+                </div>
+                <label class="label" for="">Código de segurança (CVV)</label>
+                <input class="input" type="number" placeholder="000">
+                <button class="button button-secundario">Adicionar cartão</button>
+            </div>
+            <button class="button button-principal">Revisar pedido</button>
+        </form>
+
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/plugins-jquery/jquery.mask.min.js"></script>
+    <script src="../js/compra.js"></script>
+</body>
+</html>
