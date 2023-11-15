@@ -1,0 +1,49 @@
+@import url('../_variaveis.css');
+
+span{
+    color: var(--erro-texto);
+}
+
+.pagamento{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pagamento-forma{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--verde-principal);
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.pagamento-forma:hover{
+    scale: 1.02;
+}
+
+.pagamento-forma-label{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.pagamento-icon{
+    width: 50px;
+}
+
+.nomeReceptor{
+    display: none;
+}
+
+#formPagamento{
+    display: none;
+}
+
+.cadastroCartao{
+    display: none;
+    flex-direction: column;
+}

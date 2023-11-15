@@ -1,0 +1,14 @@
+:root {
+    --background-principal: rgb(245, 245, 224);
+
+    --texto-principal: #1f1f1f;
+    --texto-secundario: #fff;
+    --texto-terciario: #000;
+
+    --verde-principal: rgba(56, 128, 15);
+    --verde-secundario: rgb(168, 227, 168);
+    --verde-botao: rgb(1, 77, 1);
+
+    --erro-texto: red;
+    --erro-background: rgb(226, 158, 158);
+}

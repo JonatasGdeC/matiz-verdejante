@@ -1,15 +1,16 @@
-const btnFiltro = document.getElementById("btn-filtro");
+const header = document.getElementById("headerProdutos");
+const btnOpenFiltro = document.getElementById("btnOpenFiltro");
+const btnCloseFiltro = document.getElementById("btnCloseFiltro");
 const filtro = document.getElementById("filtro");
 const produtos = document.getElementById("produtos");
 const modal = document.getElementById("modal");
 const btnCloseModal = document.getElementById("close-modal");
+const botaoVoltar = document.getElementById("btn-voltar");
 
 localStorage.setItem("index", window.location.href);
 
-btnFiltro.addEventListener("click", () => {
-    filtro.classList.toggle("filtro-aberto");
-});
 
+//Carrossel principal contendos os diversos produtos
 $(".list-produtos").slick({
     infinite: true,
     speed: 300,
@@ -36,52 +37,33 @@ $(".list-produtos").slick({
     ],
 });
 
+//Carrossel secundário contendo as imagens dos produtos após abrir o "modal"
+$(".img-produto").slick({
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true
+});
+
+btnOpenFiltro.addEventListener('click', ()=>{
+    filtro.style.display='block'
+})
+
+btnCloseFiltro.addEventListener('click', ()=>{
+    filtro.style.display='none'
+})
+
+//Habilita a visualização do "modal"
 function verMais(){
+    header.style.display='none'
     produtos.style.display='none'
-    btnFiltro.style.display='none'
     modal.style.display='block'
 }
 
-function estaLogadoLogo() {
-    const logoSite = document.getElementById("logo-site");
-    logoSite.addEventListener("click", () => {
-        const paginaAnterior = document.referrer;
-        if (
-        paginaAnterior == "https://matiz-verdejante.vercel.app/index.html" ||
-        /*Apenas para desenvolvimento -->*/ paginaAnterior ==
-            "http://127.0.0.1:5500/index.html"
-        ) {
-        window.location = "../index.html";
-        } else {
-        window.location = "../pages/homeUsers.html";
-        }
-    });
-}
-
-function estaLogadoMenu() {
-    const paginaAnterior = document.referrer;
-    if (
-        paginaAnterior == "https://matiz-verdejante.vercel.app/pages/homeUsers.html" ||
-        /*Apenas para desenvolvimento -->*/ paginaAnterior == "http://127.0.0.1:5500/pages/homeUsers.html" || 
-        paginaAnterior == "https://matiz-verdejante.vercel.app/pages/compra.html" ||
-        /*Apenas para desenvolvimento -->*/ paginaAnterior == "http://127.0.0.1:5500/pages/compra.html"
-    ) {
-        const btnUser = document.getElementById("btn-user");
-        const menuUser = document.getElementById("menu-user");
-        const closeMenuUser = document.getElementById("icon-link-secundary");
-
-        btnUser.addEventListener("click", () => {
-        menuUser.style.display = "block";
-        });
-        closeMenuUser.addEventListener("click", () => {
-        menuUser.style.display = "none";
-        });
-    } else {
-        window.location = "login.html";
-    }
-    }
-
-    function estaLogadoParaComprar() {
+//Veirifica se usuário está logado para compra
+//Caso a última tela de acesso seja a 'index.html' é considerado que usuário não esteja logado no sistema
+function estaLogadoParaComprar() {
     const paginaAnterior = document.referrer;
     if (
         paginaAnterior == "https://matiz-verdejante.vercel.app/pages/homeUsers.html" ||
@@ -93,35 +75,17 @@ function estaLogadoMenu() {
     } else {
         window.location = "login.html";
     }
-    }
+}
 
-    const btnHamburguer = document.getElementById("menu-hamburguer");
-    const links = document.getElementById("header-links");
-    const btnCloseMenu = document.getElementById("btn-close");
-
-    btnHamburguer.addEventListener("click", () => {
-    btnHamburguer.style.display = "none";
-    btnCloseMenu.style.display = "block";
-    links.style.display = "block";
-});
-
-btnCloseMenu.addEventListener("click", () => {
-    btnHamburguer.style.display = "block";
-    links.style.display = "none";
-    btnCloseMenu.style.display = "none";
-});
-
-
+//Evento de fechar o "modal"
 btnCloseModal.addEventListener('click', ()=>{
+    header.style.display='flex'
     produtos.style.display='block'
-    btnFiltro.style.display='block'
     modal.style.display='none'
 })
 
-$(".img-produto").slick({
-    infinite: false,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true
-});
+//Funcionalidade do botão voltar
+botaoVoltar.addEventListener('click',()=>{
+    const paginaAnterior = document.referrer;
+    window.location=(paginaAnterior)
+})
