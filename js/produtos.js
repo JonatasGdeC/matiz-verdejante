@@ -46,12 +46,31 @@ $(".img-produto").slick({
     dots: true
 });
 
+// Efeito menu hamburguer para filtro:
+const movimentoIR = [
+    {transform: "translateX(300px)"},
+    {transform: "translateX(0px)"},
+]
+const movimentoVOLTAR = [
+    {transform: "translateX(0px)"},
+    {transform: "translateX(300px)"},
+]
+
+//Duração do efeito do menu hamburguer para o filtro
+const tempoEvento = {
+    duration: 100,
+    iterations: 1,
+}
+
 btnOpenFiltro.addEventListener('click', ()=>{
     filtro.style.display='block'
+    filtro.animate(movimentoIR, tempoEvento)
 })
 
 btnCloseFiltro.addEventListener('click', ()=>{
-    filtro.style.display='none'
+    filtro.animate(movimentoVOLTAR,tempoEvento).addEventListener('finish', ()=>{
+        filtro.style.display='none'
+    })
 })
 
 //Habilita a visualização do "modal"
@@ -87,5 +106,9 @@ btnCloseModal.addEventListener('click', ()=>{
 //Funcionalidade do botão voltar
 botaoVoltar.addEventListener('click',()=>{
     const paginaAnterior = document.referrer;
-    window.location=(paginaAnterior)
+    if(paginaAnterior == 'https://matiz-verdejante.vercel.app/pages/compra.html'){
+        window.location = "homeUsers.html"
+    } else{
+        window.location=(paginaAnterior)
+    }
 })

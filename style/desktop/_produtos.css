@@ -216,3 +216,9 @@
         width: 100%;
     }
 }
+
+@media(max-width: 524px){
+    .header-buscar{
+        display: none;
+    }
+}

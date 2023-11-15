@@ -1,10 +1,3 @@
-//Funcionamento do botão voltar
-const btnVoltar = document.getElementById('btn-voltar');
-
-btnVoltar.addEventListener('click', ()=>{
-    window.location = "produtos.html"
-})
-
 //Span de erro
 const createSpan = document.createElement('span')
 

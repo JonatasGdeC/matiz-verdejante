@@ -1,3 +1,4 @@
+//Efeito carrossel de imagens
 $('.carrossel').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -7,6 +8,7 @@ $('.carrossel').slick({
     dots: true
 });
 
+//Efeito scroll
 AOS.init();
 
 const btnHamburguer = document.getElementById('menu-hamburguer')
@@ -17,11 +19,14 @@ btnHamburguer.addEventListener('click', ()=>{
     btnHamburguer.style.display='none'
     btnCloseMenu.style.display='block'
     links.style.display='block'
+    links.animate(movimentoIR, tempoEvento)
 })
 
 btnCloseMenu.addEventListener('click', ()=>{
     btnHamburguer.style.display='block'
-    links.style.display='none'
+    links.animate(movimentoVOLTAR, tempoEvento).addEventListener('finish', ()=>{
+        links.style.display='none'
+    })
     btnCloseMenu.style.display='none'
 })
 
