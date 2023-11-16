@@ -30,6 +30,12 @@ btnCloseMenu.addEventListener('click', ()=>{
     btnCloseMenu.style.display='none'
 })
 
+function scrollToSection(className) {
+    $('html, body').animate({
+        scrollTop: $(className).offset().top
+    }, 1000);
+}
+
 if(window.innerWidth < 760){
     $('.destaque-lista').slick({
         dots: true,

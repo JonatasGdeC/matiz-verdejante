@@ -121,7 +121,7 @@
 }
 
 .produtos-categoria{
-    padding: 0 50px;
+    padding: 80px 50px 0;
     width: 100%;
     display: flex;
     flex-direction: column;

@@ -1,6 +1,10 @@
 //Span de erro
 const createSpan = document.createElement('span')
 
+//Seções disponíveis
+const formEntrega = document.getElementById('formEntrega');
+const formPagamento = document.getElementById('formPagamento')
+
 //Validação de formulário de endereço
 $('#cep').mask('00000-000')
 
@@ -12,6 +16,7 @@ const cidadeEntrega = document.getElementById('cidade')
 const estadoEntrega = document.getElementById('estado')
 const checkPresente = document.getElementById('presente')
 const nomeReceptor = document.getElementById('nomeReceptor')
+const btnFormEntrega = document.getElementById('btn-form-entrega')
 
 function zeraEntradas() {
     enderecoEntrega.value = ''
@@ -49,10 +54,17 @@ cepEntrega.addEventListener('keyup', ()=>{
     }
 })
 
+//Se checkbox for preeenchido, abrira um novo campo de input
 checkPresente.addEventListener('click',()=>{
     if (checkPresente.checked) {
         nomeReceptor.style.display='block'
     } else {
         nomeReceptor.style.display='none'
     }
+})
+
+btnFormEntrega.addEventListener('click', ()=>{
+    alert('Deve criar as validações do form entrega!!!')
+    formEntrega.style.display='none'
+    formPagamento.style.display='block'
 })
