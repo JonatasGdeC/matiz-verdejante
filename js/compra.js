@@ -68,3 +68,11 @@ btnFormEntrega.addEventListener('click', ()=>{
     formEntrega.style.display='none'
     formPagamento.style.display='block'
 })
+
+//Validação do formulário de pagamento
+const pagamentoCartao = document.getElementById("cartao")
+const cadastroCartao = document.getElementById('cadastroCartao')
+
+pagamentoCartao.addEventListener('click',()=>{
+    cadastroCartao.style.display='flex'
+})
