@@ -1,7 +1,21 @@
 @import url('./_variaveis.css');
 
-.centro{
-max-width: 1024px;
-width: 100%;
-margin: 0 auto;
-}
+  label { 
+        cursor: pointer;
+    }
+    #coracao { 
+        display: none;
+    }
+    #coracao:checked+label>svg {
+        animation: preencher;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes preencher {
+        0% {
+            fill: transparent;
+        }
+        100% {
+            fill: #19b425;
+        }
+    }
