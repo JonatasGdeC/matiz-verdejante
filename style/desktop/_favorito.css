@@ -1,4 +1,67 @@
 @import url('./_variaveis.css');
+.caracaoA
+  label { 
+        cursor: pointer;
+    }
+    #coracao { 
+        display: none;
+    }
+    #coracao:checked+label>svg {
+        animation: preencher;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes preencher {
+        0% {
+            fill: transparent;
+        }
+        100% {
+            fill: #19b425;
+        }
+    }
+
+.caracaoB
+  label { 
+        cursor: pointer;
+    }
+    #coracao { 
+        display: none;
+    }
+    #coracao:checked+label>svg {
+        animation: preencher;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes preencher {
+        0% {
+            fill: transparent;
+        }
+        100% {
+            fill: #19b425;
+        }
+    }
+
+.caracaoC
+  label { 
+        cursor: pointer;
+    }
+    #coracao { 
+        display: none;
+    }
+    #coracao:checked+label>svg {
+        animation: preencher;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes preencher {
+        0% {
+            fill: transparent;
+        }
+        100% {
+            fill: #19b425;
+        }
+    }
+
 .caracaoD
   label { 
         cursor: pointer;
