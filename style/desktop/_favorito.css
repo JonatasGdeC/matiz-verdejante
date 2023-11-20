@@ -3,10 +3,10 @@
   label { 
         cursor: pointer;
     }
-    #coracao { 
+    #coracaoA { 
         display: none;
     }
-    #coracao:checked+label>svg {
+    #coracaoA:checked+label>svg {
         animation: preencher;
         animation-duration: .5s;
         animation-fill-mode: forwards;
@@ -24,10 +24,10 @@
   label { 
         cursor: pointer;
     }
-    #coracao { 
+    #coracaoB { 
         display: none;
     }
-    #coracao:checked+label>svg {
+    #coracaoB:checked+label>svg {
         animation: preencher;
         animation-duration: .5s;
         animation-fill-mode: forwards;
@@ -45,10 +45,10 @@
   label { 
         cursor: pointer;
     }
-    #coracao { 
+    #coracaoC { 
         display: none;
     }
-    #coracao:checked+label>svg {
+    #coracaoC:checked+label>svg {
         animation: preencher;
         animation-duration: .5s;
         animation-fill-mode: forwards;
@@ -66,10 +66,10 @@
   label { 
         cursor: pointer;
     }
-    #coracao { 
+    #coracaoD { 
         display: none;
     }
-    #coracao:checked+label>svg {
+    #coracaoD:checked+label>svg {
         animation: preencher;
         animation-duration: .5s;
         animation-fill-mode: forwards;
