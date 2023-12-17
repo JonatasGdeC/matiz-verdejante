@@ -1,0 +1,59 @@
+:root {
+    --background-principal: rgb(245, 245, 224);
+
+    --texto-principal: #1f1f1f;
+    --texto-secundario: #fff;
+    --texto-terciario: #000;
+
+    --verde-principal: rgba(56, 128, 15);
+    --verde-secundario: rgb(168, 227, 168);
+    --verde-botao: rgb(1, 77, 1);
+
+    --erro-texto: red;
+    --erro-background: rgb(226, 158, 158);
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+@mixin hoverLinks() {
+    cursor: pointer;
+    transition: all ease 0.3s;
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+@mixin inputPadrao(){
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 12px 0 0 12px;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+@mixin BtnMobile(){
+    color: var(--texto-secundario);
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+.section{
+    margin: 35px 0;
+
+    &Title{
+        color: var(--verde-principal);
+        text-align: center;
+        font-size: 32px;
+        padding: 20px 0;
+    }
+}

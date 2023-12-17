@@ -1,0 +1,42 @@
+@import '../../main.scss';
+
+.Section{
+    &Category{
+        &List{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media (max-width: 1024px){
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            &Item{
+                max-width: 180px;
+                width: 100%;
+                height: 180px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                border-radius: 12px;
+                background-color: var(--verde-secundario);
+                transition: all ease 0.3s;
+
+                &:hover{
+                    scale: 1.03;
+                }
+
+                &Img{
+                    width: 90px;
+                }
+
+                &Title{
+                    color: var(--texto-terciario);
+                }
+            }
+        }
+    }
+}

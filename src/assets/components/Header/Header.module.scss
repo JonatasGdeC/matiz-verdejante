@@ -1,0 +1,120 @@
+@import '../../main.scss';
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px;
+    background-color: var(--verde-principal);
+
+    &Logo{
+        width: 90px;
+        margin-right: 25px;
+        @include hoverLinks()
+    }
+
+    &Options{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+
+        @media(max-width: 1024px){
+            display: none;
+            position: fixed;
+            width: auto;
+            right: 0;
+            top: 0;
+            justify-content: flex-end;
+            align-items: end;
+            flex-direction: column-reverse;
+            height: 100vh;
+            z-index: 1;
+            padding: 20px;
+            background-color: var(--verde-botao);
+        }
+    }
+
+    &Links{
+        display: flex;
+        font-size: 20px;
+        font-weight: bold;
+        gap: 20px;
+
+        &Link{
+            color: var(--texto-secundario);
+            @include hoverLinks();
+        }
+
+        @media (max-width: 1024px){
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    &User{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+        justify-content: right;
+
+        @media(max-width: 1024px){
+            justify-content: space-between;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        &Search{
+            display: flex;
+            width: 70%;
+            align-items: center;
+            border: transparent;
+            border-radius: 12px;
+            background-color: #fff;
+
+            @media (max-width: 1024px){
+                width: 100%;
+            }
+
+            &Input{
+                @include inputPadrao();
+                border:none;
+            }
+
+            &Button{
+                font-size: 20px;
+                border: none;
+                background-color: transparent;
+                padding: 10px;
+                cursor: pointer;
+                transition: all ease 0.3s;
+
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        &Login{
+            width: 50px;
+            @include hoverLinks()
+        }
+    }
+
+    &CloseMenu{
+        @include BtnMobile();
+
+        @media (max-width: 1024px){
+            display: block;
+        }
+    }
+
+    &BtnMenu{
+        @include BtnMobile();
+
+        @media (max-width: 1024px){
+            display: flex;
+        }
+    }
+}
